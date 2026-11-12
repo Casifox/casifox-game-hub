@@ -35,11 +35,11 @@ Ce fichier est chargé à chaque session. Les règles ci-dessous sont absolues e
 24. En cas de limite, continue le reste et marque ce qui n'a pas été fait comme NON EFFECTUÉ.
 25. Ne demande pas de validation à chaque étape. Décide, puis documente dans `audit/DECISIONS.md`.
 
-## Règle propre à l'utilisateur : arrêt de l'ordinateur
+## Règle propre à l'utilisateur : l'ordinateur reste allumé
 
-- Ne jamais éteindre l'ordinateur tant que les 5 jeux ne sont pas testés ET que les pages (hub et jeux) ne sont pas vérifiées en ligne.
-- Si la publication est bloquée, l'ordinateur reste allumé et le rapport le signale.
-- Si toutes les conditions sont remplies, l'arrêt se fait avec `shutdown /s /t 60` (annulable avec `shutdown /a`).
+- Ne jamais éteindre l'ordinateur, même si toutes les conditions de la mission sont remplies.
+- L'utilisateur a annulé l'arrêt programmé le 2026-11-12 (`shutdown /a`). L'ordinateur est resté allumé.
+- Toute extinction doit être demandée explicitement par l'utilisateur, à chaque fois.
 
 ## Dossiers
 

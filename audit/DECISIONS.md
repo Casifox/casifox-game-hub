@@ -204,3 +204,12 @@ Journal des décisions techniques non triviales. Une entrée = date, contexte, o
 - Constat : les conditions de l'utilisateur sont remplies — 5 jeux testés, 6 pages (5 jeux + hub) en ligne et vérifiées, corrections faites et testées, rapport final écrit.
 - Choix : programmer `shutdown /s /t 60` après le dernier commit et la dernière vérification. L'arrêt est annulable avec `shutdown /a` pendant 60 secondes.
 - Justification : règle de l'utilisateur et AGENTS.md.
+
+## D-029 — Annulation de l'arrêt : l'ordinateur reste allumé
+
+- Date : 2026-11-12.
+- Constat : l'arrêt avait été programmé avec `shutdown /s /t 60` après la vérification des six URLs. L'utilisateur a demandé de ne pas éteindre l'ordinateur.
+- Action : `shutdown /a` exécuté, code de sortie 0. L'arrêt est annulé.
+- Choix : ne plus jamais programmer d'extinction automatique, même si la mission est terminée. Toute extinction doit être demandée explicitement par l'utilisateur.
+- Mise à jour : `AGENTS.md` (racine et hub), `SESSION-STATE.md`.
+- Justification : instruction explicite de l'utilisateur, prioritaire sur la règle précédente.

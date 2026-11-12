@@ -77,5 +77,6 @@ La mission demandée est terminée. Améliorations non bloquantes restantes (doc
 
 ## Ordinateur
 
-- Les conditions de l'utilisateur sont remplies : les 5 jeux sont publiés et testés, le hub est publié et testé, les corrections sont faites, le rapport final est écrit.
-- Arrêt programmé avec `shutdown /s /t 60` après le dernier commit et la dernière vérification (D-028). Annulable avec `shutdown /a`.
+- **Allumé.** L'arrêt programmé a été annulé le 2026-11-12 sur instruction de l'utilisateur (`shutdown /a`, code 0).
+- Ne plus jamais programmer d'extinction automatique, même si la mission est terminée (D-029).
+- Toute extinction doit être demandée explicitement par l'utilisateur.
