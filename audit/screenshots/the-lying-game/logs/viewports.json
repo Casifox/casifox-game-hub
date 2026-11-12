@@ -1,0 +1,592 @@
+{
+  "test": "Étape 8 — viewports",
+  "env": {
+    "node": "v24.22.1",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18",
+    "os": "Windows_NT 10.0.26300 x64",
+    "headless": true,
+    "locale": "fr-FR",
+    "timezone": "Europe/Paris",
+    "deviceScaleFactor": 1,
+    "baseUrl": "http://127.0.0.1:8103/"
+  },
+  "results": [
+    {
+      "name": "1920x1080",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "isMobile": false,
+      "hasTouch": false,
+      "titre": {
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "horizontalOverflowPx": 0,
+        "dataView": "home",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -37335,
+            "right": 39255
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 1536,
+            "right": 2176
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": null,
+        "portraitGameTop": null
+      },
+      "jeuPret": true,
+      "jeu": {
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "horizontalOverflowPx": 0,
+        "dataView": "game",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -37335,
+            "right": 39255
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 1536,
+            "right": 2176
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": {
+          "left": 0,
+          "right": 1920,
+          "width": 1920,
+          "height": 1080,
+          "transform": null
+        },
+        "portraitGameTop": null
+      },
+      "renderer": {
+        "type": "webgl",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "canvasWidth": 960,
+        "canvasHeight": 540
+      },
+      "pageerrors": [],
+      "console": [
+        {
+          "t": 7930,
+          "type": "warning",
+          "text": "[.WebGL-0x1da40061e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 8037,
+          "type": "warning",
+          "text": "[.WebGL-0x1da40061e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 8099,
+          "type": "warning",
+          "text": "[.WebGL-0x1da40061e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 8258,
+          "type": "warning",
+          "text": "[.WebGL-0x1da40061e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        }
+      ],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 5828,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-1920x1080-titre.png",
+          "bytes": 878709,
+          "sha256": "38d5bd62999faa5a5ad2b8ecbf38127723915907f6cac14e54ef0153fc095a2b"
+        },
+        {
+          "t": 15131,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-1920x1080-jeu.png",
+          "bytes": 1790063,
+          "sha256": "62b799816f7e44c8279f0d2777dc3a78ecfb24127880eaa93d84fe342a9f4afe"
+        }
+      ]
+    },
+    {
+      "name": "1366x768",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "isMobile": false,
+      "hasTouch": false,
+      "titre": {
+        "innerWidth": 1366,
+        "innerHeight": 768,
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "horizontalOverflowPx": 0,
+        "dataView": "home",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -2162,
+            "right": 3528
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 982,
+            "right": 1622
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": null,
+        "portraitGameTop": null
+      },
+      "jeuPret": true,
+      "jeu": {
+        "innerWidth": 1366,
+        "innerHeight": 768,
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "horizontalOverflowPx": 0,
+        "dataView": "game",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -2162,
+            "right": 3528
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 982,
+            "right": 1622
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": {
+          "left": 0,
+          "right": 1366,
+          "width": 1365,
+          "height": 768,
+          "transform": null
+        },
+        "portraitGameTop": null
+      },
+      "renderer": {
+        "type": "webgl",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "canvasWidth": 960,
+        "canvasHeight": 540
+      },
+      "pageerrors": [],
+      "console": [],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 5496,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-1366x768-titre.png",
+          "bytes": 518030,
+          "sha256": "fa65837cf0b2e24bdd460cf4b05447bf8039f9647f38f5d14d247c2221d8695b"
+        },
+        {
+          "t": 15092,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-1366x768-jeu.png",
+          "bytes": 949036,
+          "sha256": "c009313e38d55c263e33edfad5761116d8002343b27365ae7f50598787e967b5"
+        }
+      ]
+    },
+    {
+      "name": "768x1024",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "isMobile": false,
+      "hasTouch": false,
+      "titre": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "horizontalOverflowPx": 0,
+        "dataView": "home",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -5648,
+            "right": 6416
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 384,
+            "right": 1024
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": null,
+        "portraitGameTop": null
+      },
+      "jeuPret": true,
+      "jeu": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "horizontalOverflowPx": 0,
+        "dataView": "game",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -5648,
+            "right": 6416
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 384,
+            "right": 1024
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": {
+          "left": 0,
+          "right": 768,
+          "width": 768,
+          "height": 432,
+          "transform": null
+        },
+        "portraitGameTop": null
+      },
+      "renderer": {
+        "type": "webgl",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "canvasWidth": 960,
+        "canvasHeight": 540
+      },
+      "pageerrors": [],
+      "console": [],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 5592,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-768x1024-titre.png",
+          "bytes": 387006,
+          "sha256": "9c80c7703269846ab68f7fb23606e9b092efd1e6f9ae2bd4affe1d14e064bcef"
+        },
+        {
+          "t": 14897,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-768x1024-jeu.png",
+          "bytes": 614293,
+          "sha256": "0394534ab4bc57473787b63a743681c5a9791efef227af58c8eb998e66cd8ded"
+        }
+      ]
+    },
+    {
+      "name": "390x844-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "isMobile": true,
+      "hasTouch": true,
+      "titre": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "horizontalOverflowPx": 0,
+        "dataView": "home",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -844,
+            "right": 1234
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 6,
+            "right": 646
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "hidden",
+        "canvas": null,
+        "portraitGameTop": null
+      },
+      "jeuPret": true,
+      "jeu": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "horizontalOverflowPx": 0,
+        "dataView": "game",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -844,
+            "right": 1234
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 6,
+            "right": 646
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          },
+          {
+            "tag": "canvas",
+            "id": null,
+            "className": "",
+            "left": -434,
+            "right": 824
+          }
+        ],
+        "containerOverflow": "hidden",
+        "canvas": {
+          "left": -434,
+          "right": 824,
+          "width": 1259,
+          "height": 708,
+          "transform": "translate3d(-434.5px, 0px, 0px)"
+        },
+        "portraitGameTop": "136px"
+      },
+      "renderer": {
+        "type": "webgl",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "canvasWidth": 960,
+        "canvasHeight": 540
+      },
+      "pageerrors": [],
+      "console": [],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 5575,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-390x844-mobile-titre.png",
+          "bytes": 191773,
+          "sha256": "53d570ef26746d262907dd24968a6ce704014d7af943ce5f38b8520aa350696f"
+        },
+        {
+          "t": 15208,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-390x844-mobile-jeu.png",
+          "bytes": 308109,
+          "sha256": "1ace6cbada7738e3c9603bf838368233aa80649a536196a8a61a5c02ff54de36"
+        }
+      ]
+    },
+    {
+      "name": "844x390-paysage-mobile",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "isMobile": true,
+      "hasTouch": true,
+      "titre": {
+        "innerWidth": 844,
+        "innerHeight": 390,
+        "clientWidth": 844,
+        "scrollWidth": 844,
+        "horizontalOverflowPx": 0,
+        "dataView": "home",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -421,
+            "right": 1265
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 460,
+            "right": 1100
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": null,
+        "portraitGameTop": null
+      },
+      "jeuPret": true,
+      "jeu": {
+        "innerWidth": 844,
+        "innerHeight": 390,
+        "clientWidth": 844,
+        "scrollWidth": 844,
+        "horizontalOverflowPx": 0,
+        "dataView": "game",
+        "offenders": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__grid",
+            "left": -421,
+            "right": 1265
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--one",
+            "left": 460,
+            "right": 1100
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient__orb ambient__orb--two",
+            "left": -224,
+            "right": 192
+          }
+        ],
+        "containerOverflow": "visible",
+        "canvas": {
+          "left": 113,
+          "right": 806,
+          "width": 693,
+          "height": 390,
+          "transform": null
+        },
+        "portraitGameTop": null
+      },
+      "renderer": {
+        "type": "webgl",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "canvasWidth": 960,
+        "canvasHeight": 540
+      },
+      "pageerrors": [],
+      "console": [],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 5403,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-844x390-paysage-mobile-titre.png",
+          "bytes": 202208,
+          "sha256": "62fc601b14236db7c47651e0a2b6faba6448776379a5c963feb4e21da012fc64"
+        },
+        {
+          "t": 14061,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\viewport-844x390-paysage-mobile-jeu.png",
+          "bytes": 304878,
+          "sha256": "9e7caacb223c7d60971c201343c3fe7d1804f58acfe928b6e103cfaeb40a0806"
+        }
+      ]
+    }
+  ]
+}

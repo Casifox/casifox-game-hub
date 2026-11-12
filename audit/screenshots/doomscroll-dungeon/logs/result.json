@@ -1,0 +1,185 @@
+{
+  "slug": "doomscroll-dungeon",
+  "startedAt": "2026-11-12T09:19:35.194Z",
+  "steps": [
+    {
+      "id": "LOAD",
+      "title": "Chargement initial (1920x1080, 5 s de stabilisation)",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; réponses HTTP>=400=0 ; requêtes en échec=0 ; console error/warning=0",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "TUTORIEL",
+      "title": "Tutoriel de premier lancement affiché puis passé (« Passer le tutoriel »)",
+      "status": "TEST RÉUSSI",
+      "detail": "tutoriel visible à l'ouverture d'une partie sur un profil neuf",
+      "evidence": "02a-tutoriel.png"
+    },
+    {
+      "id": "START",
+      "title": "Démarrage : [data-menu=\"new\"] puis [data-launch]",
+      "status": "TEST RÉUSSI",
+      "detail": "article.post présents après démarrage : 6",
+      "evidence": "02-partie-demarree.png"
+    },
+    {
+      "id": "PLAY-30S",
+      "title": "Partie de 30 s : Espace, X, Maj+Flèche bas, C, S",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS pendant la partie=0 ; longueur du texte visible : 2014 → 2151",
+      "evidence": "04-partie-30s.png"
+    },
+    {
+      "id": "PAUSE",
+      "title": "Pause (Échap) puis reprise ([data-pause-resume])",
+      "status": "TEST RÉUSSI",
+      "detail": "pause ouverte=true ; encore ouverte après reprise=false",
+      "evidence": "05-pause.png"
+    },
+    {
+      "id": "PERSIST",
+      "title": "Sauvegarde de partie présente après rechargement (doomscroll.v1.run)",
+      "status": "TEST RÉUSSI",
+      "detail": "clé avant rechargement=true ; après=true",
+      "evidence": null
+    },
+    {
+      "id": "VERSION",
+      "title": "Concordance version publique / build local (dist/)",
+      "status": "TEST RÉUSSI",
+      "detail": "asset servi : index-D7lIcBne.js ; asset du build local : index-D7lIcBne.js",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Affichage 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs JS=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Affichage 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs JS=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Affichage 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 768 ; innerWidth 768) ; erreurs JS=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Affichage 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 390 ; innerWidth 390) ; erreurs JS=0",
+      "evidence": "vp-390.png"
+    }
+  ],
+  "metrics": {
+    "timings": {
+      "domContentLoadedMs": 549,
+      "loadMs": 552
+    },
+    "fps": {
+      "seconds": 10,
+      "perSecond": [
+        10,
+        8,
+        8,
+        9,
+        8,
+        7,
+        9,
+        8,
+        9
+      ],
+      "avgFps": 8.4,
+      "minFps": 7
+    },
+    "heapBytes": 10000000
+  },
+  "viewports": [
+    {
+      "viewport": "1920",
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "1366",
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "768",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    }
+  ],
+  "logs": {
+    "console": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "resources": [
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/",
+        "status": 200,
+        "bytes": 1531
+      },
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/assets/index-mnH4sPco.css",
+        "status": 200,
+        "bytes": 109379
+      },
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/assets/index-D7lIcBne.js",
+        "status": 200,
+        "bytes": 156437
+      },
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/?seed=WKRUFV",
+        "status": 200,
+        "bytes": 1531
+      },
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/assets/index-D7lIcBne.js",
+        "status": 200,
+        "bytes": 156437
+      },
+      {
+        "url": "https://casifox.github.io/doomscroll-dungeon/assets/index-mnH4sPco.css",
+        "status": 200,
+        "bytes": 109379
+      }
+    ]
+  },
+  "baseUrl": "https://casifox.github.io/doomscroll-dungeon/",
+  "finishedAt": "2026-11-12T09:20:54.491Z",
+  "sizeByType": {
+    "autre": 3062,
+    "css": 218758,
+    "js": 312874
+  }
+}

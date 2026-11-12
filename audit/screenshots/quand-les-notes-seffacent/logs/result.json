@@ -1,0 +1,554 @@
+{
+  "slug": "quand-les-notes-seffacent",
+  "startedAt": "2026-11-12T09:01:08.665Z",
+  "steps": [
+    {
+      "id": "LOAD",
+      "title": "Chargement initial (1920x1080, 5 s de stabilisation)",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; réponses HTTP>=400=0 ; requêtes en échec=0 ; console error/warning=0",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "START",
+      "title": "Démarrage : #btn-new-game puis [data-slot=\"0\"][data-action=\"new\"]",
+      "status": "TEST RÉUSSI",
+      "detail": "carnet 1 ouvert via « Commencer ici »",
+      "evidence": "02-partie-demarree.png"
+    },
+    {
+      "id": "PLAY-30S",
+      "title": "Partie de 30 s : Espace, bouton #btn-next, menu à 20 s",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; texte visible 194 → 256",
+      "evidence": "05-jeu-30s.png"
+    },
+    {
+      "id": "PAUSE",
+      "title": "Menu (Échap) : ouverture puis fermeture",
+      "status": "TEST RÉUSSI",
+      "detail": "menu ouvert=true ; fermé=true",
+      "evidence": "04-menu.png"
+    },
+    {
+      "id": "PERSIST",
+      "title": "Sauvegarde présente après rechargement (qlnse.save.v1.*) et bouton #btn-continue actif",
+      "status": "TEST RÉUSSI",
+      "detail": "clés avant rechargement=[\"qlnse.save.v1.0\"] ; #btn-continue actif=true",
+      "evidence": null
+    },
+    {
+      "id": "VERSION",
+      "title": "Concordance version publique / HEAD (index.html)",
+      "status": "TEST RÉUSSI",
+      "detail": "SHA256 servi=459CEC97490CD915… ; SHA256 HEAD=459CEC97490CD915… (index.html)",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Affichage 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs JS=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Affichage 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs JS=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Affichage 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 768 ; innerWidth 768) ; erreurs JS=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Affichage 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 390 ; innerWidth 390) ; erreurs JS=0",
+      "evidence": "vp-390.png"
+    }
+  ],
+  "metrics": {
+    "timings": {
+      "domContentLoadedMs": 3480,
+      "loadMs": 3636
+    },
+    "fps": {
+      "seconds": 10,
+      "perSecond": [
+        12,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        10,
+        12
+      ],
+      "avgFps": 11.1,
+      "minFps": 10
+    },
+    "heapBytes": 10000000
+  },
+  "viewports": [
+    {
+      "viewport": "1920",
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "1366",
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "768",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    }
+  ],
+  "logs": {
+    "console": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "resources": [
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/",
+        "status": 200,
+        "bytes": 25485
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/responsive.css",
+        "status": 200,
+        "bytes": 15708
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/game.css",
+        "status": 200,
+        "bytes": 15572
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/screens.css",
+        "status": 200,
+        "bytes": 25087
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/epilogue.svg",
+        "status": 200,
+        "bytes": 8576
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/arrivee.svg",
+        "status": 200,
+        "bytes": 9602
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/main.js",
+        "status": 200,
+        "bytes": 41398
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/piano.css",
+        "status": 200,
+        "bytes": 16665
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/base.css",
+        "status": 200,
+        "bytes": 15164
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/atelier.svg",
+        "status": 200,
+        "bytes": 15008
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/utils.js",
+        "status": 200,
+        "bytes": 2673
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/storage.js",
+        "status": 200,
+        "bytes": 7911
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/notes.js",
+        "status": 200,
+        "bytes": 3082
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/memories.js",
+        "status": 200,
+        "bytes": 9314
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/endings.js",
+        "status": 200,
+        "bytes": 953
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/puzzles.js",
+        "status": 200,
+        "bytes": 6496
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/index.js",
+        "status": 200,
+        "bytes": 1465
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/ui/staff.js",
+        "status": 200,
+        "bytes": 5387
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/audio.js",
+        "status": 200,
+        "bytes": 23450
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/atmosphere.js",
+        "status": 200,
+        "bytes": 8476
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/game/engine.js",
+        "status": 200,
+        "bytes": 24995
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/prologue.js",
+        "status": 200,
+        "bytes": 2206
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day7.js",
+        "status": 200,
+        "bytes": 7673
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day2.js",
+        "status": 200,
+        "bytes": 9015
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day1.js",
+        "status": 200,
+        "bytes": 8175
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day6.js",
+        "status": 200,
+        "bytes": 12162
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day5.js",
+        "status": 200,
+        "bytes": 10755
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day3.js",
+        "status": 200,
+        "bytes": 9130
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/music.js",
+        "status": 200,
+        "bytes": 19100
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day4.js",
+        "status": 200,
+        "bytes": 9644
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/ui/portrait.js",
+        "status": 200,
+        "bytes": 27568
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/game/piano.js",
+        "status": 200,
+        "bytes": 28752
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/epilogues.js",
+        "status": 200,
+        "bytes": 15304
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/helpers.js",
+        "status": 200,
+        "bytes": 655
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/plage.svg",
+        "status": 200,
+        "bytes": 10717
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/grenier.svg",
+        "status": 200,
+        "bytes": 10958
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/gare.svg",
+        "status": 200,
+        "bytes": 9747
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/tempete.svg",
+        "status": 200,
+        "bytes": 10554
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/phare.svg",
+        "status": 200,
+        "bytes": 17613
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/cuisine.svg",
+        "status": 200,
+        "bytes": 14630
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/cuisine.svg",
+        "status": 200,
+        "bytes": 14630
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/base.css",
+        "status": 200,
+        "bytes": 15164
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/",
+        "status": 200,
+        "bytes": 25485
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/screens.css",
+        "status": 200,
+        "bytes": 25087
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/game.css",
+        "status": 200,
+        "bytes": 15572
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/piano.css",
+        "status": 200,
+        "bytes": 16665
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/css/responsive.css",
+        "status": 200,
+        "bytes": 15708
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/main.js",
+        "status": 200,
+        "bytes": 41398
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/arrivee.svg",
+        "status": 200,
+        "bytes": 9602
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/epilogue.svg",
+        "status": 200,
+        "bytes": 8576
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/atelier.svg",
+        "status": 200,
+        "bytes": 15008
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/atmosphere.js",
+        "status": 200,
+        "bytes": 8476
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/audio.js",
+        "status": 200,
+        "bytes": 23450
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/notes.js",
+        "status": 200,
+        "bytes": 3082
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/storage.js",
+        "status": 200,
+        "bytes": 7911
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/core/utils.js",
+        "status": 200,
+        "bytes": 2673
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/endings.js",
+        "status": 200,
+        "bytes": 953
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/memories.js",
+        "status": 200,
+        "bytes": 9314
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/puzzles.js",
+        "status": 200,
+        "bytes": 6496
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/game/engine.js",
+        "status": 200,
+        "bytes": 24995
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/index.js",
+        "status": 200,
+        "bytes": 1465
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/ui/staff.js",
+        "status": 200,
+        "bytes": 5387
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/data/music.js",
+        "status": 200,
+        "bytes": 19100
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/ui/portrait.js",
+        "status": 200,
+        "bytes": 27568
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/game/piano.js",
+        "status": 200,
+        "bytes": 28752
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/prologue.js",
+        "status": 200,
+        "bytes": 2206
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day1.js",
+        "status": 200,
+        "bytes": 8175
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day2.js",
+        "status": 200,
+        "bytes": 9015
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day3.js",
+        "status": 200,
+        "bytes": 9130
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day4.js",
+        "status": 200,
+        "bytes": 9644
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day5.js",
+        "status": 200,
+        "bytes": 10755
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day6.js",
+        "status": 200,
+        "bytes": 12162
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/day7.js",
+        "status": 200,
+        "bytes": 7673
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/epilogues.js",
+        "status": 200,
+        "bytes": 15304
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/js/story/helpers.js",
+        "status": 200,
+        "bytes": 655
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/cuisine.svg",
+        "status": 200,
+        "bytes": 14630
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/gare.svg",
+        "status": 200,
+        "bytes": 9747
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/plage.svg",
+        "status": 200,
+        "bytes": 10717
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/grenier.svg",
+        "status": 200,
+        "bytes": 10958
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/tempete.svg",
+        "status": 200,
+        "bytes": 10554
+      },
+      {
+        "url": "https://casifox.github.io/quand-les-notes-seffacent/assets/art/backgrounds/phare.svg",
+        "status": 200,
+        "bytes": 17613
+      }
+    ]
+  },
+  "baseUrl": "https://casifox.github.io/quand-les-notes-seffacent/",
+  "finishedAt": "2026-11-12T09:02:34.093Z",
+  "sizeByType": {
+    "autre": 50970,
+    "css": 176392,
+    "svg": 229440,
+    "js": 591478
+  }
+}

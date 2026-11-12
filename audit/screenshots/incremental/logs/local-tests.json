@@ -1,0 +1,154 @@
+{
+  "startedAt": "2026-11-11T23:28:41.992Z",
+  "localServer": {
+    "command": "node serve.js \"C:\\Users\\Noah\\Documents\\incremental\" 8104",
+    "cwd": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit-tools",
+    "root": "C:\\Users\\Noah\\Documents\\incremental"
+  },
+  "chromiumVersion": "158.0.8127.18",
+  "tests": {
+    "T-INCR-01-controle-procedure-litterale": {
+      "methode": "Procédure littérale : localStorage.setItem(clé, \"{\") dans la page, puis page.reload(). Contrôle de la procédure.",
+      "baseline": {
+        "present": true,
+        "validJson": true,
+        "tokens": 250,
+        "journalLength": 0,
+        "bytes": 7595
+      },
+      "apresSetItem": {
+        "present": true,
+        "validJson": false,
+        "parseError": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+        "value": "{",
+        "bytes": 1
+      },
+      "apresRechargement": {
+        "present": true,
+        "validJson": true,
+        "tokens": 250,
+        "journalLength": 0,
+        "bytes": 7629
+      },
+      "sousControleBeforeunload": {
+        "methode": "Même page, sans rechargement : localStorage.setItem(clé, \"{\") puis dispatchEvent(new Event(\"beforeunload\")) (listener main.js 141-144).",
+        "apresSetItem": {
+          "present": true,
+          "validJson": false,
+          "parseError": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+          "value": "{",
+          "bytes": 1
+        },
+        "apresDispatchBeforeunload": {
+          "present": true,
+          "validJson": true,
+          "tokens": 250,
+          "journalLength": 0,
+          "bytes": 7581
+        }
+      },
+      "avertissementSauvegardeCorrompue": 0,
+      "lecture": "La valeur \"{\" n'a jamais été lue par State.load : elle a été réécrite par la sauvegarde de sortie (beforeunload, main.js 141-144 → State.save, state.js 284-299) avant le démarrage de la nouvelle page. La procédure littérale ne déclenche donc pas le chemin bugué ; voir T-INCR-01 (variante).",
+      "statut": "TEST PARTIEL (contrôle de procédure : non concluant pour le bug)"
+    },
+    "T-INCR-01": {
+      "methode": "Init script (sessionStorage flag) : pose localStorage[\"neon_jackpot_save_v1\"] = \"{\" juste avant le démarrage de l'application au rechargement suivant, afin d'éviter l'écrasement par la sauvegarde beforeunload de l'ancienne page. Puis : lecture de la clé, avertissement console, App.state.saveSoon() manuel, recherche de clés de secours.",
+      "baseline": {
+        "present": true,
+        "validJson": true,
+        "tokens": 250,
+        "journalLength": 0,
+        "bytes": 7578
+      },
+      "probeAvantDemarrage": "{",
+      "premiereLectureApresAppReady": {
+        "present": true,
+        "validJson": false,
+        "parseError": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+        "value": "{",
+        "bytes": 1
+      },
+      "remplacementConstateApresMsDepuisAppReady": 625,
+      "apresDemarrage": {
+        "present": true,
+        "validJson": true,
+        "tokens": 250,
+        "journalLength": 0,
+        "bytes": 7570
+      },
+      "apresSaveSoonManuel": {
+        "present": true,
+        "validJson": true,
+        "tokens": 250,
+        "journalLength": 0,
+        "bytes": 7576
+      },
+      "avertissementsConsole": [
+        "[state] sauvegarde corrompue, nouvelle partie SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at State.load (http://127.0.0.1:8104/src/js/state.js?v=1.5.1:269:20)\n    at HTMLDocument.boot (http://127.0.0.1:8104/src/js/main.js?v=1.5.1:18:15)"
+      ],
+      "clesLocalStorageApresDemarrage": [
+        "neon_jackpot_save_v1"
+      ],
+      "clesLocalStorageApresTest": [
+        "neon_jackpot_save_v1"
+      ],
+      "clesAutresQueLaPrincipale": {},
+      "lecture": "BUG-incremental-001 confirmé : la valeur \"{\" de la clé principale a été remplacée automatiquement après le démarrage, sans aucune clé de secours.",
+      "statut": "TEST ÉCHOUÉ",
+      "capture": "screenshots/incremental/t-incr-01.png"
+    },
+    "T-INCR-02": {
+      "methode": "Voie par fichier : clic sur #import-save (pages.js 1143-1171), interception du filechooser, fichier JSON construit par App.state.export() avec journal[0].icon = <img src=x onerror=\"window.__xss=1\">, confirmation « Importer » dans le modal, rechargement, ouverture de #hub, lecture de window.__xss.",
+      "dialogueConfirmation": "Importer la sauvegarde ?\n✕\n\nLa sauvegarde actuelle sera remplacée et la page va se recharger. Cette action est irréversible.\n\nAnnuler\nImporter",
+      "typeNavigationApresImport": "reload",
+      "iconeImporteeDansEtat": "<img src=x onerror=\"window.__xss=1\">",
+      "htmlInjecteDansJournal": "<img src=\"x\" onerror=\"window.__xss=1\">",
+      "nbImgDansJournal": 1,
+      "xss": 1,
+      "lecture": "BUG-incremental-002 confirmé : window.__xss = 1 après ouverture du journal rendu depuis une sauvegarde importée.",
+      "statut": "TEST ÉCHOUÉ",
+      "capture": "screenshots/incremental/t-incr-02.png"
+    },
+    "T-INCR-03": {
+      "methode": "Dans la page : App.utils.deepMerge(App.state.defaultState(), JSON.parse('{\"__proto__\":{\"polluted\":1},\"tokens\":1}')), puis lecture de ({}).polluted et de result.polluted.",
+      "resultat": {
+        "resultPolluted": 1,
+        "resultPollutedEstPropreAuObjet": false,
+        "prototypeDuResultatEstObjectPrototype": false,
+        "clesDuPrototypeDuResultat": [
+          "polluted"
+        ],
+        "resultTokens": 1
+      },
+      "pollutionGlobaleDemontree": false,
+      "injectionLocaleDemontree": true,
+      "lecture": "Pollution globale NON démontrée : ({}).polluted reste undefined. Injection locale démontrée : le filtrage de __proto__ est absent, l'objet fusionné reçoit le prototype fourni par le fichier (result.polluted = 1, propriété non propre). BUG-incremental-003 reste SUSPECTÉ pour la pollution globale.",
+      "statut": "TEST PARTIEL"
+    }
+  },
+  "console": [
+    {
+      "label": "T-INCR-01",
+      "t": 8397,
+      "type": "warning",
+      "text": "[state] sauvegarde corrompue, nouvelle partie SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at State.load (http://127.0.0.1:8104/src/js/state.js?v=1.5.1:269:20)\n    at HTMLDocument.boot (http://127.0.0.1:8104/src/js/main.js?v=1.5.1:18:15)"
+    },
+    {
+      "label": "T-INCR-02",
+      "t": 19224,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "pageErrors": [],
+  "requestFailed": [],
+  "httpErrors": [
+    {
+      "label": "T-INCR-02",
+      "t": 19224,
+      "url": "http://127.0.0.1:8104/x",
+      "status": 404
+    }
+  ],
+  "finishedAt": "2026-11-11T23:29:04.015Z"
+}

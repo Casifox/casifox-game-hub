@@ -1,0 +1,13 @@
+{
+  "name": "casifox-audit-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Outils d'audit et de test isoles (Playwright, Chromium uniquement). Ne pas utiliser pour les projets de jeux.",
+  "scripts": {
+    "install-browser": "playwright install chromium",
+    "serve": "node serve.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

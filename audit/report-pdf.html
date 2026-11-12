@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CASIFOX — Mises à jour à faire</title>
+<style>
+  @page { size: A4; margin: 18mm 14mm 18mm 14mm; }
+  @media print { .cover { margin-top: 6mm; } h2 { break-after: avoid; } h3 { break-after: avoid; } }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+    color: #1b1d23; font-size: 10.2pt; line-height: 1.45; margin: 0;
+  }
+  h1 { font-size: 24pt; margin: 0 0 4px; letter-spacing: -0.5px; color: #10131a; }
+  h2 { font-size: 14pt; margin: 22px 0 8px; padding-bottom: 5px; border-bottom: 2px solid #d5316a; color: #10131a; }
+  h3 { font-size: 11.4pt; margin: 14px 0 4px; color: #10131a; }
+  p { margin: 0 0 8px; }
+  ul, ol { margin: 0 0 9px; padding-left: 18px; }
+  li { margin-bottom: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 12px; font-size: 9.2pt; }
+  th, td { border: 1px solid #ccd0d8; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #eef1f6; font-weight: 600; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .cover { border-left: 7px solid #d5316a; padding: 4px 0 4px 16px; margin-bottom: 16px; }
+  .subtitle { font-size: 12pt; color: #4a4f5a; margin: 2px 0 10px; }
+  .meta { font-size: 9.2pt; color: #5a6070; }
+  .badge { display: inline-block; padding: 1px 7px; border-radius: 9px; font-size: 8.4pt; font-weight: 700; color: #fff; white-space: nowrap; }
+  .critique { background: #b5121b; }
+  .majeure { background: #d9731a; }
+  .mineure { background: #c2a200; color: #1b1d23; }
+  .ok { background: #1f7a3d; }
+  .ko { background: #b5121b; }
+  .partiel { background: #8a6d00; }
+  .none { background: #6b7280; }
+  .card { border: 1px solid #d7dbe2; border-radius: 6px; padding: 10px 12px; margin: 8px 0; background: #fcfcfd; page-break-inside: avoid; }
+  .card h3 { margin-top: 0; }
+  .kv { font-size: 9.4pt; margin: 2px 0; }
+  .kv b { color: #333944; }
+  .callout { background: #fff4f6; border: 1px solid #f0b9c8; border-radius: 6px; padding: 10px 12px; margin: 10px 0; page-break-inside: avoid; }
+  .callout strong { color: #a30f2c; }
+  .note { background: #f2f5f9; border-left: 4px solid #7a8699; padding: 8px 11px; margin: 10px 0; font-size: 9.4pt; page-break-inside: avoid; }
+  .num { display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; background: #10131a; color: #fff; text-align: center; font-size: 9pt; font-weight: 700; margin-right: 4px; }
+  .two { display: flex; gap: 12px; }
+  .two > div { flex: 1; }
+  .small { font-size: 8.8pt; color: #555b66; }
+  .nowrap { white-space: nowrap; }
+  .footer-note { margin-top: 18px; border-top: 1px solid #ccd0d8; padding-top: 8px; font-size: 8.8pt; color: #5a6070; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>CASIFOX — Mises à jour à faire</h1>
+  <div class="subtitle">Bilan d'audit des 5 jeux et plan de correction priorisé</div>
+  <div class="meta">
+    Document créé le 12 novembre 2026 · Dossier d'audit : <b>C:\Users\Noah\Documents\CASIFOX-GAME-HUB\audit\</b><br>
+    Jeux audités : AVANT LE SILENCE · Doomscroll Dungeon · Quand les notes s'effacent · The Lying Game · Neon Jackpot
+  </div>
+</div>
+
+<h2>1. En bref</h2>
+<p>Les cinq jeux ont été lus, construits et testés réellement. <b>Les cinq sont désormais publiés sur GitHub Pages et testés sur leur URL publique</b> (les trois derniers le 12 novembre). Sept anomalies ont été reproduites à l'exécution. <b>Aucune correction n'a encore été appliquée</b> : ce document liste celles à faire, par ordre de priorité, avec leur preuve.</p>
+<ul>
+  <li><b>1 bug critique</b> : Neon Jackpot — une sauvegarde forgée, importée par le joueur, exécute du code dans le navigateur.</li>
+  <li><b>2 bugs majeurs</b> : Neon Jackpot et AVANT LE SILENCE — une sauvegarde illisible est remplacée sans copie de secours.</li>
+  <li><b>4 bugs mineurs</b> : The Lying Game (2), Doomscroll Dungeon (1), Neon Jackpot (1).</li>
+  <li><b>Points sains vérifiés</b> : builds et tests automatiques verts (35/35 pour Doomscroll, 24/24 pour The Lying Game), 0 erreur JavaScript sur les 5 parcours, 0 ressource manquante, aucun débordement horizontal sur 4 tailles d'écran.</li>
+</ul>
+
+<div class="callout">
+  <strong>Priorité n°1 :</strong> corriger Neon Jackpot (critique + majeur) et AVANT LE SILENCE (majeur). Ce sont les seuls bugs qui font perdre des données ou exposent le navigateur. Les autres peuvent attendre une passe ultérieure.
+</div>
+
+<h2>2. Bugs confirmés à l'exécution</h2>
+<table>
+  <thead>
+    <tr><th>ID</th><th>Jeu</th><th>Bug</th><th>Gravité</th><th>Statut</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>BUG-incremental-002</td><td>Neon Jackpot</td><td>Sauvegarde importée : script exécuté dans la page (XSS)</td><td><span class="badge critique">CRITIQUE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-incremental-001</td><td>Neon Jackpot</td><td>Sauvegarde corrompue réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-avant-le-silence-001</td><td>AVANT LE SILENCE</td><td>Sauvegarde illisible réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-the-lying-game-001</td><td>The Lying Game</td><td>Minuteur de cadrage portrait actif en permanence (144 appels en 10 s)</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-the-lying-game-002</td><td>The Lying Game</td><td>Nouvelle partie : ancienne sauvegarde effacée avant l'écriture de la nouvelle</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-doomscroll-dungeon-001</td><td>Doomscroll Dungeon</td><td>Graine de sauvegarde affichée en HTML brut</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge partiel">HTML CONFIRMÉ</span></td></tr>
+    <tr><td>BUG-incremental-003</td><td>Neon Jackpot</td><td>Fusion de sauvegarde : pollution de prototype locale</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge partiel">PARTIEL</span></td></tr>
+  </tbody>
+</table>
+<p class="small">« CONFIRMÉ » = reproduit à l'exécution, preuve dans <b>audit/screenshots/&lt;jeu&gt;/logs/targeted-*.json</b>. Pour Doomscroll, l'injection HTML est confirmée ; le script n'a pas été exécuté dans les conditions testées.</p>
+
+<h3>Détail des deux corrections prioritaires</h3>
+
+<div class="card">
+  <h3>Neon Jackpot — BUG-incremental-002 (CRITIQUE)</h3>
+  <div class="kv"><b>Fichiers :</b> <span class="nowrap">src/js/state.js</span> (import, lignes 324–332), <span class="nowrap">src/js/pages.js</span> (rendu du journal et des effets, lignes 167, 210, 632), <span class="nowrap">src/js/utils.js</span> (fusion, lignes 147–164).</div>
+  <div class="kv"><b>Constat :</b> une sauvegarde importée n'est contrôlée que sur un champ (<span class="nowrap">tokens</span>). Les champs <span class="nowrap">journal[].icon</span> et <span class="nowrap">buffs[].icon/value</span> sont ensuite insérés tels quels dans la page. Test : un fichier contenant <span class="nowrap">&lt;img src=x onerror="…"&gt;</span> fait exécuter le script (vérifié).</div>
+  <div class="kv"><b>Pourquoi c'est critique :</b> l'origine <b>casifox.github.io</b> est partagée par tous vos projets publiés. Un script exécuté dans Neon Jackpot peut lire les sauvegardes des autres jeux du même domaine.</div>
+  <div class="kv"><b>Correction :</b> valider le schéma de la sauvegarde à l'import et au chargement (types, longueurs, liste blanche pour les icônes, valeur numérique) ; échapper tous les champs affichés ; ne pas copier les tableaux sans contrôle.</div>
+  <div class="kv"><b>Vérification :</b> rejouer T-INCR-02 : le script ne doit plus s'exécuter.</div>
+</div>
+
+<div class="card">
+  <h3>Neon Jackpot — BUG-incremental-001 (MAJEURE)</h3>
+  <div class="kv"><b>Fichiers :</b> <span class="nowrap">src/js/state.js</span> (chargement 262–275, sauvegarde 284–299), <span class="nowrap">src/js/main.js</span> (sauvegarde automatique, 120–123).</div>
+  <div class="kv"><b>Constat :</b> une sauvegarde illisible (JSON invalide) est remplacée par une partie neuve dans les premières secondes, sans conserver la valeur d'origine.</div>
+  <div class="kv"><b>Correction :</b> avant la première écriture, copier la valeur brute sous <span class="nowrap">neon_jackpot_save_v1.backup.&lt;date&gt;</span> et prévenir le joueur.</div>
+  <div class="kv"><b>Vérification :</b> rejouer T-INCR-01 : une clé de secours doit apparaître.</div>
+</div>
+
+<div class="card">
+  <h3>AVANT LE SILENCE — BUG-avant-le-silence-001 (MAJEURE)</h3>
+  <div class="kv"><b>Fichiers :</b> <span class="nowrap">js/storage/save-manager.js</span> (lecture 28–39), <span class="nowrap">js/core/state-manager.js</span> (chargement 22–31, écriture 74).</div>
+  <div class="kv"><b>Constat :</b> la valeur illisible reste en place jusqu'à la première action du joueur, puis est remplacée par une progression neuve, sans copie.</div>
+  <div class="kv"><b>Prérequis :</b> le projet n'a pas de dépôt Git. Décider d'initialiser un dépôt local avant de modifier (traçabilité et retour arrière).</div>
+  <div class="kv"><b>Correction :</b> copier la valeur brute sous <span class="nowrap">avant-le-silence.save.v1.backup.&lt;date&gt;</span> avant tout écrasement.</div>
+  <div class="kv"><b>Vérification :</b> rejouer T-AVANT-01 : une copie de secours doit apparaître.</div>
+</div>
+
+<h2 class="pagebreak">3. Plan de mise à jour, par jeu</h2>
+<p>Chaque ligne indique la priorité, le fichier concerné et le contrôle à passer après modification. <b>P0</b> = à faire avant toute publication ; <b>P1</b> = important, impact réel ; <b>P2</b> = facultatif ou à mesurer d'abord.</p>
+
+<h3>3.1 Neon Jackpot — dossier <span class="small">C:\Users\Noah\Documents\incremental</span></h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>P0</b></td><td>Valider la sauvegarde à l'import et au chargement ; échapper l'affichage</td><td>src/js/state.js, pages.js, utils.js</td><td>T-INCR-01, 02, 03</td></tr>
+    <tr><td><b>P0</b></td><td>Copie de secours avant remplacement d'une sauvegarde illisible</td><td>src/js/state.js</td><td>T-INCR-01</td></tr>
+    <tr><td><b>P1</b></td><td>Tests automatisés de l'état et de la sauvegarde (<span class="nowrap">node:test</span>, sans dépendance)</td><td>nouveau dossier tests/</td><td>exécution des tests</td></tr>
+    <tr><td><b>P2</b></td><td>Réduire les re-rendus complets des pages (plus de 90 <span class="nowrap">innerHTML</span>) — seulement si les mesures le justifient</td><td>games/*.js, pages.js</td><td>non mesuré à ce jour</td></tr>
+  </tbody>
+</table>
+
+<h3>3.2 AVANT LE SILENCE — dossier <span class="small">C:\Users\Noah\Documents\AVANT LE SILENCE</span></h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>FAIT</b></td><td>Dépôt Git initialisé et publié le 12/11 : <span class="nowrap">Casifox/avant-le-silence</span></td><td>racine du projet</td><td>commit <span class="nowrap">1ac53ba</span></td></tr>
+    <tr><td><b>P0</b></td><td>Copie de secours d'une sauvegarde illisible</td><td>js/storage/save-manager.js, js/core/state-manager.js</td><td>T-AVANT-01</td></tr>
+    <tr><td><b>P1</b></td><td>Tests JavaScript de la validation et des migrations de sauvegarde</td><td>nouveau dossier tests/</td><td>exécution des tests</td></tr>
+    <tr><td><b>P2</b></td><td>Points du CHANGELOG non techniques (relecture historique, droits sur les archives) : à traiter par l'auteur, hors audit</td><td>CHANGELOG.md</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3>3.3 The Lying Game — dossier <span class="small">C:\Users\Noah\Documents\the-lying-game</span></h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>P1</b></td><td>Minuteur de cadrage portrait : ne démarrer qu'en portrait et l'arrêter à la fin de la partie</td><td>src/core/GameApp.ts</td><td>T-LYING-01 (0 appel en paysage)</td></tr>
+    <tr><td><b>P1</b></td><td>Nouvelle partie : écrire la nouvelle sauvegarde avant de supprimer l'ancienne</td><td>src/core/GameApp.ts</td><td>T-LYING-02</td></tr>
+    <tr><td><b>FAIT</b></td><td>Publié le 12/11 : <span class="nowrap">https://casifox.github.io/the-lying-game/</span></td><td>dépôt GitHub</td><td>test public : TEST RÉUSSI</td></tr>
+    <tr><td><b>P2</b></td><td>Réduire le poids du bundle (1,44 Mo, 398 Ko compressés) par découpage</td><td>vite.config.ts, src/main.ts</td><td>mesure du chargement</td></tr>
+  </tbody>
+</table>
+
+<h3>3.4 Doomscroll Dungeon — dossier <span class="small">C:\Users\Noah\Documents\doomscroll-dungeon</span></h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>P1</b></td><td>Assainir la graine au chargement de la sauvegarde ; afficher en texte et non en HTML</td><td>src/storage/save.ts, src/ui/overlays.ts, src/ui/results.ts</td><td>T-DOOM-01</td></tr>
+    <tr><td><b>P1</b></td><td>Mettre à jour les outils de développement vulnérables (6 alertes, aucune dans le jeu livré)</td><td>package.json, package-lock.json</td><td>npm test (35 tests) + build</td></tr>
+    <tr><td><b>P2</b></td><td>Mesurer le coût du fil (rendus par innerHTML) avant optimisation</td><td>src/ui/feed.ts</td><td>métriques</td></tr>
+  </tbody>
+</table>
+
+<h3>3.5 Quand les notes s'effacent — dossier <span class="small">C:\Users\Noah\Documents\QUAND LES NOTES S'EFFACENT</span></h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>FAIT</b></td><td>Dépôt Git, README, LICENSE et version 1.0.0 ajoutés le 12/11 ; publié sur <span class="nowrap">Casifox/quand-les-notes-seffacent</span></td><td>racine du projet</td><td>commit <span class="nowrap">5d7947b</span></td></tr>
+    <tr><td><b>FAIT</b></td><td>Validation automatisée présente : <span class="nowrap">tests/validate.mjs</span>, 1 669 vérifications réussies (<span class="nowrap">npm test</span>)</td><td>tests/validate.mjs</td><td>exécution : OK</td></tr>
+    <tr><td><b>FAIT</b></td><td>Publié le 12/11 : <span class="nowrap">https://casifox.github.io/quand-les-notes-seffacent/</span></td><td>dépôt GitHub</td><td>test public : TEST RÉUSSI</td></tr>
+    <tr><td><b>P2</b></td><td>Compléter l'audit du moteur (engine.js, piano.js, story/*) non lus en phase 2</td><td>—</td><td>rapport complémentaire</td></tr>
+  </tbody>
+</table>
+
+<h3>3.6 Transversal</h3>
+<table>
+  <thead><tr><th>Prio.</th><th>Mise à jour</th><th>Fichiers</th><th>Contrôle après correction</th></tr></thead>
+  <tbody>
+    <tr><td><b>P1</b></td><td>Politique commune de sauvegarde : version explicite, copie de secours avant réécriture, validation des types</td><td>fichiers de sauvegarde des 4 jeux concernés</td><td>tests ciblés rejoués</td></tr>
+    <tr><td><b>P0</b></td><td>Ne jamais publier avant que les P0 soient corrigés et re-testés</td><td>—</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h2 class="pagebreak">4. Résultats de test déjà obtenus</h2>
+<p>Mesures indicatives : Chromium headless en rendu logiciel, réseau local ou GitHub Pages. Les FPS ne représentent pas un appareil réel.</p>
+<table>
+  <thead><tr><th>Jeu</th><th>Publication</th><th>Parcours</th><th>Requêtes</th><th>Poids</th><th>Chargement</th><th>FPS moy. / min.</th></tr></thead>
+  <tbody>
+    <tr><td>Doomscroll Dungeon</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span></td><td>6</td><td>535 Ko</td><td>0,52 s</td><td>6,6 / 5</td></tr>
+    <tr><td>Neon Jackpot</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span> (pause non testée)</td><td>56</td><td>1,64 Mo</td><td>1,14 s</td><td>5,8 / 4</td></tr>
+    <tr><td>AVANT LE SILENCE</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span> (pause non applicable)</td><td>98</td><td>867 Ko</td><td>0,19 s</td><td>60,6 / 60</td></tr>
+    <tr><td>Quand les notes s'effacent</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span></td><td>81</td><td>1,05 Mo</td><td>3,48 s</td><td>11,1 / 10</td></tr>
+    <tr><td>The Lying Game</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span></td><td>10</td><td>3,13 Mo</td><td>3,20 s</td><td>14 / 12</td></tr>
+  </tbody>
+</table>
+<p class="small">Aucune erreur JavaScript, aucune réponse HTTP en échec et aucun débordement horizontal (1920, 1366, 768, 390 px) sur les 5 parcours. Les deux jeux publiés servent exactement la version du code local (comparaison par empreinte SHA256).</p>
+
+<h2>5. Publication</h2>
+<table>
+  <thead><tr><th>Jeu</th><th>Adresse</th><th>État</th></tr></thead>
+  <tbody>
+    <tr><td>Doomscroll Dungeon</td><td>https://casifox.github.io/doomscroll-dungeon/</td><td><span class="badge ok">EN LIGNE</span> — version locale identique</td></tr>
+    <tr><td>Neon Jackpot</td><td>https://casifox.github.io/neon-jackpot/</td><td><span class="badge ok">EN LIGNE</span> — version locale identique</td></tr>
+    <tr><td>AVANT LE SILENCE</td><td>https://casifox.github.io/avant-le-silence/</td><td><span class="badge ok">EN LIGNE</span> — SHA256 servi = HEAD</td></tr>
+    <tr><td>Quand les notes s'effacent</td><td>https://casifox.github.io/quand-les-notes-seffacent/</td><td><span class="badge ok">EN LIGNE</span> — SHA256 servi = HEAD</td></tr>
+    <tr><td>The Lying Game</td><td>https://casifox.github.io/the-lying-game/</td><td><span class="badge ok">EN LIGNE</span> — workflow Pages, SHA256 servi = HEAD</td></tr>
+  </tbody>
+</table>
+<p>Les trois publications ont été testées sur leur URL publique le 12 novembre : chargement, démarrage, partie de 30 s, sauvegarde et affichage sur 4 tailles d'écran. Toutes réussies, 0 erreur JavaScript, 0 requête en échec. Détail : <b>audit/PUBLICATION.md</b> et <b>audit/TEST-REPORT-*.md</b>.</p>
+<p>Le hub « CASIFOX GAME HUB » n'est pas encore créé : il doit être construit après la notation, à partir des données réelles.</p>
+
+<h2>6. Ordre d'exécution conseillé</h2>
+<ol>
+  <li><span class="num">1</span> <b>Neon Jackpot</b> : les deux P0 (critique + majeur), branche dédiée, puis T-INCR-01/02/03 et le parcours complet. C'est la seule faille de sécurité exploitable.</li>
+  <li><span class="num">2</span> <b>AVANT LE SILENCE</b> : initialiser Git, puis la copie de secours (T-AVANT-01).</li>
+  <li><span class="num">3</span> <b>The Lying Game</b> : les deux corrections dans GameApp.ts, puis T-LYING-01/02.</li>
+  <li><span class="num">4</span> <b>Doomscroll Dungeon</b> : assainir la graine (T-DOOM-01), mettre à jour les outils de développement, relancer les 35 tests.</li>
+  <li><span class="num">5</span> <b>Quand les notes s'effacent</b> : Git, README, version ; tests des données de récit.</li>
+  <li><span class="num">6</span> <b>Politique commune de sauvegarde</b>, puis re-test de chacun.</li>
+  <li><span class="num">7</span> <b>Notation avant/après</b>, puis <b>hub</b>, <b>publication du hub</b> et tests finaux. Les cinq jeux sont déjà en ligne.</li>
+</ol>
+
+<div class="note">
+  <b>Règle de publication :</b> aucune correction ne part en ligne sans tests verts. Aucun envoi forcé. Chaque correction sur une branche <span class="nowrap">audit/2026-11-12-&lt;jeu&gt;</span>, avec entrée dans le journal des modifications et re-test du parcours complet.
+</div>
+
+<h2>7. Limites de ce bilan</h2>
+<ul>
+  <li>Les parcours durent 30 secondes : ils ne couvrent pas une partie complète, ni les fins de partie.</li>
+  <li>Les FPS et la mémoire sont mesurés en navigateur sans affichage (headless) : indicatifs seulement.</li>
+  <li>La pause n'a pas été testée sur Neon Jackpot et AVANT LE SILENCE ; la concordance de version a été vérifiée par SHA256 pour les trois publications.</li>
+  <li>L'audit du code source est partiel sur les gros modules (moteurs, contenus). Les fichiers non lus sont listés dans chaque rapport technique.</li>
+  <li>Les bugs sont décrits avec leur preuve (<b>audit/BUGS.md</b>, <b>audit/TECHNICAL-AUDIT-*.md</b>, <b>audit/TEST-REPORT-*.md</b>, JSON et captures dans <b>audit/screenshots/</b>).</li>
+</ul>
+
+<div class="footer-note">
+  CASIFOX GAME HUB — bilan d'audit du 12 novembre 2026. Sources : <b>audit/FINAL-REPORT.md</b> (à venir), <b>audit/BUGS.md</b>, <b>audit/IMPROVEMENTS.md</b>, <b>audit/TEST-REPORT-*.md</b>, <b>audit/SCORES.md</b> (à venir). Aucune statistique, aucun avis et aucune popularité ne sont simulés dans ce document.
+</div>
+
+</body>
+</html>

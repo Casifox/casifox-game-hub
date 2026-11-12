@@ -1,0 +1,442 @@
+{
+  "slug": "incremental",
+  "startedAt": "2026-11-12T09:17:52.095Z",
+  "steps": [
+    {
+      "id": "LOAD",
+      "title": "Chargement initial (1920x1080, 5 s de stabilisation)",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; réponses HTTP>=400=0 ; requêtes en échec=0 ; console error/warning=0",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "ACCUEIL",
+      "title": "Fenêtre de bienvenue du premier lancement fermée par « Jouer au Plinko »",
+      "status": "TEST RÉUSSI",
+      "detail": "fenêtre visible sur un profil neuf ; bouton cliqué",
+      "evidence": "01b-bienvenue.png"
+    },
+    {
+      "id": "START",
+      "title": "Ouverture du Plinko (location.hash = plinko) et bouton #plinko-drop visible",
+      "status": "TEST RÉUSSI",
+      "detail": "bouton visible=true",
+      "evidence": "02-plinko.png"
+    },
+    {
+      "id": "PLAY-30S",
+      "title": "Partie de 30 s : clic sur #plinko-drop toutes les 2 s",
+      "status": "TEST RÉUSSI",
+      "detail": "compteur de parties #plinko-plays : 0 → 6 ; erreurs JS=0",
+      "evidence": "04-partie-30s.png"
+    },
+    {
+      "id": "PAUSE",
+      "title": "Pause",
+      "status": "TEST NON EFFECTUÉ",
+      "detail": "Aucun contrôle de pause n'a été recherché ni testé dans ce parcours.",
+      "evidence": null
+    },
+    {
+      "id": "PERSIST",
+      "title": "Persistance de la progression après rechargement (neon_jackpot_save_v1.tokens)",
+      "status": "TEST RÉUSSI",
+      "detail": "jetons avant=250.489963388968 ; après=250.489963388968",
+      "evidence": null
+    },
+    {
+      "id": "VERSION",
+      "title": "Concordance version publique / HEAD (src/js/state.js)",
+      "status": "TEST RÉUSSI",
+      "detail": "SHA256 en ligne=83335A3B6926CD94… ; SHA256 blob HEAD=83335A3B6926CD94… (fichier local : state.js)",
+      "evidence": null
+    },
+    {
+      "id": "VERSION-2",
+      "title": "Concordance version publique / HEAD (src/data/bundle.js)",
+      "status": "TEST RÉUSSI",
+      "detail": "SHA256 en ligne=C3E2BA22555E097A… ; SHA256 blob HEAD=C3E2BA22555E097A…",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Affichage 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs JS=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Affichage 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs JS=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Affichage 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 768 ; innerWidth 768) ; erreurs JS=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Affichage 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 390 ; innerWidth 390) ; erreurs JS=0",
+      "evidence": "vp-390.png"
+    }
+  ],
+  "metrics": {
+    "timings": {
+      "domContentLoadedMs": 994,
+      "loadMs": 1052
+    },
+    "fps": {
+      "seconds": 10,
+      "perSecond": [
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        3,
+        4
+      ],
+      "avgFps": 3.8,
+      "minFps": 3
+    },
+    "heapBytes": 10000000
+  },
+  "viewports": [
+    {
+      "viewport": "1920",
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "1366",
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "768",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    }
+  ],
+  "logs": {
+    "console": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "resources": [
+      {
+        "url": "https://casifox.github.io/neon-jackpot/",
+        "status": 200,
+        "bytes": 8519
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "status": 200,
+        "bytes": 15761
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/base.css?v=1.5.1",
+        "status": 200,
+        "bytes": 21691
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/mines.js?v=1.5.1",
+        "status": 200,
+        "bytes": 25058
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/data/bundle.js?v=1.5.1",
+        "status": 200,
+        "bytes": 67376
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/poker.js?v=1.5.1",
+        "status": 200,
+        "bytes": 27504
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/main.js?v=1.5.1",
+        "status": 200,
+        "bytes": 6948
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/fx.js?v=1.5.1",
+        "status": 200,
+        "bytes": 20313
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/ui.js?v=1.5.1",
+        "status": 200,
+        "bytes": 35979
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/games.css?v=1.5.1",
+        "status": 200,
+        "bytes": 54214
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/plinko.js?v=1.5.1",
+        "status": 200,
+        "bytes": 52293
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/components.css?v=1.5.1",
+        "status": 200,
+        "bytes": 49552
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/roulette.js?v=1.5.1",
+        "status": 200,
+        "bytes": 35671
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/keno.js?v=1.5.1",
+        "status": 200,
+        "bytes": 23982
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/slots.js?v=1.5.1",
+        "status": 200,
+        "bytes": 34132
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/audio.js?v=1.5.1",
+        "status": 200,
+        "bytes": 8491
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/crash.js?v=1.5.1",
+        "status": 200,
+        "bytes": 31206
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/dice.js?v=1.5.1",
+        "status": 200,
+        "bytes": 24134
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/utils.js?v=1.5.1",
+        "status": 200,
+        "bytes": 12377
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/animations.css?v=1.5.1",
+        "status": 200,
+        "bytes": 12695
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/horses.js?v=1.5.1",
+        "status": 200,
+        "bytes": 29682
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/state.js?v=1.5.1",
+        "status": 200,
+        "bytes": 12975
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/blackjack.js?v=1.5.1",
+        "status": 200,
+        "bytes": 39476
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/vault.js?v=1.5.1",
+        "status": 200,
+        "bytes": 7900
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/meta.js?v=1.5.1",
+        "status": 200,
+        "bytes": 62457
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/pages.js?v=1.5.1",
+        "status": 200,
+        "bytes": 69660
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+        "status": 200,
+        "bytes": 31432
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2",
+        "status": 200,
+        "bytes": 32292
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/",
+        "status": 200,
+        "bytes": 8519
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "status": 200,
+        "bytes": 15761
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/base.css?v=1.5.1",
+        "status": 200,
+        "bytes": 21691
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/components.css?v=1.5.1",
+        "status": 200,
+        "bytes": 49552
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/games.css?v=1.5.1",
+        "status": 200,
+        "bytes": 54214
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/css/animations.css?v=1.5.1",
+        "status": 200,
+        "bytes": 12695
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/data/bundle.js?v=1.5.1",
+        "status": 200,
+        "bytes": 67376
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/utils.js?v=1.5.1",
+        "status": 200,
+        "bytes": 12377
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/audio.js?v=1.5.1",
+        "status": 200,
+        "bytes": 8491
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/fx.js?v=1.5.1",
+        "status": 200,
+        "bytes": 20313
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/state.js?v=1.5.1",
+        "status": 200,
+        "bytes": 12975
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/meta.js?v=1.5.1",
+        "status": 200,
+        "bytes": 62457
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/ui.js?v=1.5.1",
+        "status": 200,
+        "bytes": 35979
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/plinko.js?v=1.5.1",
+        "status": 200,
+        "bytes": 52293
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/blackjack.js?v=1.5.1",
+        "status": 200,
+        "bytes": 39476
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/roulette.js?v=1.5.1",
+        "status": 200,
+        "bytes": 35671
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/slots.js?v=1.5.1",
+        "status": 200,
+        "bytes": 34132
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/mines.js?v=1.5.1",
+        "status": 200,
+        "bytes": 25058
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/crash.js?v=1.5.1",
+        "status": 200,
+        "bytes": 31206
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/dice.js?v=1.5.1",
+        "status": 200,
+        "bytes": 24134
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/keno.js?v=1.5.1",
+        "status": 200,
+        "bytes": 23982
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/poker.js?v=1.5.1",
+        "status": 200,
+        "bytes": 27504
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/horses.js?v=1.5.1",
+        "status": 200,
+        "bytes": 29682
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/games/vault.js?v=1.5.1",
+        "status": 200,
+        "bytes": 7900
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/pages.js?v=1.5.1",
+        "status": 200,
+        "bytes": 69660
+      },
+      {
+        "url": "https://casifox.github.io/neon-jackpot/src/js/main.js?v=1.5.1",
+        "status": 200,
+        "bytes": 6948
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+        "status": 200,
+        "bytes": null
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2",
+        "status": 200,
+        "bytes": null
+      }
+    ]
+  },
+  "baseUrl": "https://casifox.github.io/neon-jackpot/",
+  "finishedAt": "2026-11-12T09:19:23.499Z",
+  "sizeByType": {
+    "autre": 48560,
+    "css": 276304,
+    "js": 1255228,
+    "woff2": 63724
+  }
+}

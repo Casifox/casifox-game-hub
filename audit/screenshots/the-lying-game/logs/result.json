@@ -1,0 +1,223 @@
+{
+  "slug": "the-lying-game",
+  "startedAt": "2026-11-12T09:17:52.069Z",
+  "steps": [
+    {
+      "id": "LOAD",
+      "title": "Chargement initial (1920x1080, 5 s de stabilisation)",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; réponses HTTP>=400=0 ; requêtes en échec=0 ; console error/warning=0",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "START",
+      "title": "Démarrage : bouton #home-start",
+      "status": "TEST RÉUSSI",
+      "detail": "bouton cliqué : « 01 COMMENCER L’EXPÉRIENCE L’expérience commence par un mensonge. ↗ » ; confirmation cliquée : non",
+      "evidence": "02-debut.png"
+    },
+    {
+      "id": "PROLOGUE",
+      "title": "Passer le prologue (CONTINUER ou Entrée)",
+      "status": "TEST RÉUSSI",
+      "detail": "actions=6 ; canvas Phaser présent=true",
+      "evidence": null
+    },
+    {
+      "id": "PLAY-30S",
+      "title": "Partie de 30 s : touches Z, Q, S, D (zqsd par défaut) et Entrée",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; texte visible 443 → 334",
+      "evidence": "05-jeu-30s.png"
+    },
+    {
+      "id": "PAUSE",
+      "title": "Pause (Échap) : superposition visible",
+      "status": "TEST RÉUSSI",
+      "detail": "superposition .overlay-layer visible=true",
+      "evidence": "04-pause.png"
+    },
+    {
+      "id": "PERSIST",
+      "title": "Sauvegarde présente après rechargement (the-lying-game.save.v1)",
+      "status": "TEST RÉUSSI",
+      "detail": "clé avant=true ; après=true",
+      "evidence": null
+    },
+    {
+      "id": "VERSION",
+      "title": "Concordance version publique / HEAD (docs/index.html)",
+      "status": "TEST RÉUSSI",
+      "detail": "SHA256 servi=65BE29E34F0223C7… ; SHA256 HEAD=65BE29E34F0223C7… (docs/index.html)",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Affichage 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs JS=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Affichage 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs JS=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Affichage 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 768 ; innerWidth 768) ; erreurs JS=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Affichage 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 390 ; innerWidth 390) ; erreurs JS=0",
+      "evidence": "vp-390.png"
+    }
+  ],
+  "metrics": {
+    "timings": {
+      "domContentLoadedMs": 657,
+      "loadMs": 715
+    },
+    "fps": {
+      "seconds": 10,
+      "perSecond": [
+        13,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ],
+      "avgFps": 11.9,
+      "minFps": 11
+    },
+    "heapBytes": 21700000
+  },
+  "viewports": [
+    {
+      "viewport": "1920",
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "1366",
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "768",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    }
+  ],
+  "logs": {
+    "console": [
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x53fc039a8400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x53fc039a8400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x53fc039a8400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x53fc039a8400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+      }
+    ],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "resources": [
+      {
+        "url": "https://casifox.github.io/the-lying-game/",
+        "status": 200,
+        "bytes": 18642
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/index-Cxis6QE9.css",
+        "status": 200,
+        "bytes": 76479
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/index-DQPcE2kb.js",
+        "status": 200,
+        "bytes": 1437034
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+        "status": 200,
+        "bytes": 22288
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+        "status": 200,
+        "bytes": 40404
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/",
+        "status": 200,
+        "bytes": 18642
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/index-DQPcE2kb.js",
+        "status": 200,
+        "bytes": 1437034
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/index-Cxis6QE9.css",
+        "status": 200,
+        "bytes": 76479
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+        "status": 200,
+        "bytes": null
+      },
+      {
+        "url": "https://casifox.github.io/the-lying-game/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+        "status": 200,
+        "bytes": null
+      }
+    ]
+  },
+  "baseUrl": "https://casifox.github.io/the-lying-game/",
+  "finishedAt": "2026-11-12T09:19:23.179Z",
+  "sizeByType": {
+    "autre": 37284,
+    "css": 152958,
+    "js": 2874068,
+    "woff2": 62692
+  }
+}

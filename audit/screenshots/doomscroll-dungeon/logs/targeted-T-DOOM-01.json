@@ -1,0 +1,14 @@
+{
+  "id": "T-DOOM-01",
+  "bug": "BUG-doomscroll-dungeon-001",
+  "url": "https://casifox.github.io/doomscroll-dungeon/",
+  "continueClicked": true,
+  "pauseOpen": true,
+  "status": "TEST RÉUSSI",
+  "detail": "graine affichée échappée : aucun élément HTML injecté",
+  "evidence": {
+    "scriptRan": false,
+    "seedNodeHtml": "IMGSRCXONERRORY1",
+    "pageErrors": []
+  }
+}

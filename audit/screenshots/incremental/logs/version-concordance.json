@@ -1,0 +1,600 @@
+{
+  "checkedAt": "2026-11-11T23:26:31.502Z",
+  "base": "https://casifox.github.io/neon-jackpot/",
+  "localRoot": "C:\\Users\\Noah\\Documents\\incremental",
+  "headCommit": "17614ca5dae7715b1ccef4ff0f6e12bfe3f2e93e",
+  "coreAutocrlf": "true",
+  "pagesApi": {
+    "url": "https://api.github.com/repos/Casifox/neon-jackpot/pages",
+    "status": "building",
+    "cname": null,
+    "custom_404": true,
+    "html_url": "https://casifox.github.io/neon-jackpot/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "filesCompared": 26,
+  "files": [
+    {
+      "file": "index.html",
+      "localBytes": 8519,
+      "localSha256": "b1a74c39042f2be3ab88cdabcaa93896aa867052a5eee6c4ad5b7d1dc4ecda1b",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/index.html",
+      "remoteBytes": 8519,
+      "remoteSha256": "b1a74c39042f2be3ab88cdabcaa93896aa867052a5eee6c4ad5b7d1dc4ecda1b",
+      "remoteGitBlob": "805a5b20de37e2943225421d54c370b5747d8c93",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-2147\""
+      },
+      "headGitBlob": "805a5b20de37e2943225421d54c370b5747d8c93",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "assets/logo.svg",
+      "localBytes": 1538,
+      "localSha256": "633cdd746f812782f5a3b96ee69540eebab0dffee70a0618799d113188e10da9",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/assets/logo.svg",
+      "remoteBytes": 1538,
+      "remoteSha256": "633cdd746f812782f5a3b96ee69540eebab0dffee70a0618799d113188e10da9",
+      "remoteGitBlob": "efe7177fb7524eafab9c5800e3e0c756fc56a420",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-602\""
+      },
+      "headGitBlob": "efe7177fb7524eafab9c5800e3e0c756fc56a420",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/css/base.css",
+      "localBytes": 21691,
+      "localSha256": "c0cc772ffd0a3266745db07d1cd95bfb4663d1f698f2aee2e01f9eb50d0c34d1",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/css/base.css",
+      "remoteBytes": 21691,
+      "remoteSha256": "c0cc772ffd0a3266745db07d1cd95bfb4663d1f698f2aee2e01f9eb50d0c34d1",
+      "remoteGitBlob": "7023edf383ef5ca5a9886416543a616b15da6af7",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-54bb\""
+      },
+      "headGitBlob": "7023edf383ef5ca5a9886416543a616b15da6af7",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/css/components.css",
+      "localBytes": 49552,
+      "localSha256": "e12f4daf7ba41c7f50a940ae4767b39b3aa4c26ed3ff11ead6d93ff05adc7650",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/css/components.css",
+      "remoteBytes": 49552,
+      "remoteSha256": "e12f4daf7ba41c7f50a940ae4767b39b3aa4c26ed3ff11ead6d93ff05adc7650",
+      "remoteGitBlob": "6a337b7eb3cbb912c5895e96753fed65da67212a",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-c190\""
+      },
+      "headGitBlob": "6a337b7eb3cbb912c5895e96753fed65da67212a",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/css/games.css",
+      "localBytes": 54214,
+      "localSha256": "99ec7d0284e06cec072a676b49b891b151e6dec6e782572e84fc852ccabea517",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/css/games.css",
+      "remoteBytes": 54214,
+      "remoteSha256": "99ec7d0284e06cec072a676b49b891b151e6dec6e782572e84fc852ccabea517",
+      "remoteGitBlob": "115c6666871861d40c015011d0f563667abaee08",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-d3c6\""
+      },
+      "headGitBlob": "115c6666871861d40c015011d0f563667abaee08",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/css/animations.css",
+      "localBytes": 12695,
+      "localSha256": "d0ec7443f9d1e83de440bf25ff44fe3d9d2c13935232c685e3e0dd375f95d659",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/css/animations.css",
+      "remoteBytes": 12695,
+      "remoteSha256": "d0ec7443f9d1e83de440bf25ff44fe3d9d2c13935232c685e3e0dd375f95d659",
+      "remoteGitBlob": "3b07f9ced19a6417031aa51811c6c789a305fa42",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-3197\""
+      },
+      "headGitBlob": "3b07f9ced19a6417031aa51811c6c789a305fa42",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/data/bundle.js",
+      "localBytes": 67376,
+      "localSha256": "c3e2ba22555e097a038095ca60dac04db63f9c42c7a533d2a51aae9d36de2d1f",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/data/bundle.js",
+      "remoteBytes": 67376,
+      "remoteSha256": "c3e2ba22555e097a038095ca60dac04db63f9c42c7a533d2a51aae9d36de2d1f",
+      "remoteGitBlob": "99057a6c21e6651bc8abcf481de5d198a07b51f6",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-10730\""
+      },
+      "headGitBlob": "99057a6c21e6651bc8abcf481de5d198a07b51f6",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/utils.js",
+      "localBytes": 12294,
+      "localSha256": "54684ab9620115c147e574b83d303a2809fc759d03af9fb1c18db4e4882fc153",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/utils.js",
+      "remoteBytes": 12294,
+      "remoteSha256": "54684ab9620115c147e574b83d303a2809fc759d03af9fb1c18db4e4882fc153",
+      "remoteGitBlob": "763e72ba1b40a61a68280963a472fde87c2c3009",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-3006\""
+      },
+      "headGitBlob": "763e72ba1b40a61a68280963a472fde87c2c3009",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/audio.js",
+      "localBytes": 8491,
+      "localSha256": "0f24978e6443ae1c807a5f14c50d13a93150c8912f155efe66268d00ffc8ef39",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/audio.js",
+      "remoteBytes": 8491,
+      "remoteSha256": "0f24978e6443ae1c807a5f14c50d13a93150c8912f155efe66268d00ffc8ef39",
+      "remoteGitBlob": "b1df74078b047db3e0516a1696a786e9563535a4",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-212b\""
+      },
+      "headGitBlob": "b1df74078b047db3e0516a1696a786e9563535a4",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/fx.js",
+      "localBytes": 20313,
+      "localSha256": "675f49c8d6f2fcd1d6fb1313c51cc11bc5c4421cfeb7238bee753532c20a5936",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/fx.js",
+      "remoteBytes": 20313,
+      "remoteSha256": "675f49c8d6f2fcd1d6fb1313c51cc11bc5c4421cfeb7238bee753532c20a5936",
+      "remoteGitBlob": "d24da2eee9c49fd2ddd8a94c3d4c3cc9e732d4be",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-4f59\""
+      },
+      "headGitBlob": "d24da2eee9c49fd2ddd8a94c3d4c3cc9e732d4be",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/state.js",
+      "localBytes": 10926,
+      "localSha256": "31dff08ae0a781ef815f879a4d444afc9f0a47167cccaf2e036f6eccd56fb9a9",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/state.js",
+      "remoteBytes": 10926,
+      "remoteSha256": "31dff08ae0a781ef815f879a4d444afc9f0a47167cccaf2e036f6eccd56fb9a9",
+      "remoteGitBlob": "a11ee09d7f57dbb1a14094a5f66ce0d90e3b27ed",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-2aae\""
+      },
+      "headGitBlob": "a11ee09d7f57dbb1a14094a5f66ce0d90e3b27ed",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/meta.js",
+      "localBytes": 62457,
+      "localSha256": "e35cacccc9324c95e24fe4ad75a0a3e477d698cc81cd7aaa0c406f56bedebe4e",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/meta.js",
+      "remoteBytes": 62457,
+      "remoteSha256": "e35cacccc9324c95e24fe4ad75a0a3e477d698cc81cd7aaa0c406f56bedebe4e",
+      "remoteGitBlob": "ab056a17299d9fbd3ca24e40a8c0af79afe1db33",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-f3f9\""
+      },
+      "headGitBlob": "ab056a17299d9fbd3ca24e40a8c0af79afe1db33",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/ui.js",
+      "localBytes": 35979,
+      "localSha256": "589d072ba2ae88029af2ef49813890a6d8af2f70298e8cf086e96ab3e948439e",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/ui.js",
+      "remoteBytes": 35979,
+      "remoteSha256": "589d072ba2ae88029af2ef49813890a6d8af2f70298e8cf086e96ab3e948439e",
+      "remoteGitBlob": "5ac2174e46c4591169305a4e8dcdd26b1fa80ffb",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-8c8b\""
+      },
+      "headGitBlob": "5ac2174e46c4591169305a4e8dcdd26b1fa80ffb",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/plinko.js",
+      "localBytes": 52293,
+      "localSha256": "0889a3e080b139402927e358a0c10e84a2efb2ed9603ab4da9429fd86dfcccc7",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/plinko.js",
+      "remoteBytes": 52293,
+      "remoteSha256": "0889a3e080b139402927e358a0c10e84a2efb2ed9603ab4da9429fd86dfcccc7",
+      "remoteGitBlob": "6d94faf4694509164528b6c1c3dd8c45cd66e114",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-cc45\""
+      },
+      "headGitBlob": "6d94faf4694509164528b6c1c3dd8c45cd66e114",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/blackjack.js",
+      "localBytes": 39476,
+      "localSha256": "7f21d2c0933dc80f88387d0e923fa8261535c5138f703a2d950df131f986bdb8",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/blackjack.js",
+      "remoteBytes": 39476,
+      "remoteSha256": "7f21d2c0933dc80f88387d0e923fa8261535c5138f703a2d950df131f986bdb8",
+      "remoteGitBlob": "96f4af9a3376bafbaa15b31f5cdec337246cc402",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-9a34\""
+      },
+      "headGitBlob": "96f4af9a3376bafbaa15b31f5cdec337246cc402",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/roulette.js",
+      "localBytes": 35671,
+      "localSha256": "575fe641e4a4afc2b4ae0b5cfeb75472bec8afea82c6b7a66f482c268aedc361",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/roulette.js",
+      "remoteBytes": 35671,
+      "remoteSha256": "575fe641e4a4afc2b4ae0b5cfeb75472bec8afea82c6b7a66f482c268aedc361",
+      "remoteGitBlob": "dedea9f91a6f5e5e9807fee5926fc01bb024b4e1",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-8b57\""
+      },
+      "headGitBlob": "dedea9f91a6f5e5e9807fee5926fc01bb024b4e1",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/slots.js",
+      "localBytes": 34132,
+      "localSha256": "0b0537929da39496d1ff6c0199ffc82c66b629ef374e1f8e88fc89f0db948abb",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/slots.js",
+      "remoteBytes": 34132,
+      "remoteSha256": "0b0537929da39496d1ff6c0199ffc82c66b629ef374e1f8e88fc89f0db948abb",
+      "remoteGitBlob": "91f2fbd703d2a76c2d6978a99d96772d135c3d0b",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-8554\""
+      },
+      "headGitBlob": "91f2fbd703d2a76c2d6978a99d96772d135c3d0b",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/mines.js",
+      "localBytes": 25058,
+      "localSha256": "8cce37a1da6494dbd051ef174bed9262c9edd55f39a32569d055b365e747bab9",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/mines.js",
+      "remoteBytes": 25058,
+      "remoteSha256": "8cce37a1da6494dbd051ef174bed9262c9edd55f39a32569d055b365e747bab9",
+      "remoteGitBlob": "a1f3780109f1f263fd3fe6b2b848f10aced80f8b",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-61e2\""
+      },
+      "headGitBlob": "a1f3780109f1f263fd3fe6b2b848f10aced80f8b",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/crash.js",
+      "localBytes": 31206,
+      "localSha256": "4d998241fb07467a0c205eed388220026dc29cc2d8ccd5fa20febd341cf15df5",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/crash.js",
+      "remoteBytes": 31206,
+      "remoteSha256": "4d998241fb07467a0c205eed388220026dc29cc2d8ccd5fa20febd341cf15df5",
+      "remoteGitBlob": "8f3ce96c8766a7da5e992f9251734e8054e15857",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-79e6\""
+      },
+      "headGitBlob": "8f3ce96c8766a7da5e992f9251734e8054e15857",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/dice.js",
+      "localBytes": 24134,
+      "localSha256": "9cae1a30272649d6d8d91c67df4aff8ba40c3e5b2368dc875b37d776f4ce2455",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/dice.js",
+      "remoteBytes": 24134,
+      "remoteSha256": "9cae1a30272649d6d8d91c67df4aff8ba40c3e5b2368dc875b37d776f4ce2455",
+      "remoteGitBlob": "e805ea6b51b2a03187e79d34031405a80dd972e7",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-5e46\""
+      },
+      "headGitBlob": "e805ea6b51b2a03187e79d34031405a80dd972e7",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/keno.js",
+      "localBytes": 23982,
+      "localSha256": "d6e1b87cdd69ad4633766c27d4f1eec87e56ed9aad25fc7ecd48404037f28da6",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/keno.js",
+      "remoteBytes": 23982,
+      "remoteSha256": "d6e1b87cdd69ad4633766c27d4f1eec87e56ed9aad25fc7ecd48404037f28da6",
+      "remoteGitBlob": "f699582e441d84e86bb1ef0608092a74b18bc1c3",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-5dae\""
+      },
+      "headGitBlob": "f699582e441d84e86bb1ef0608092a74b18bc1c3",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/poker.js",
+      "localBytes": 27504,
+      "localSha256": "2230820b802454d1da58573abb876861cb8852ab084d9041a592a8470cc3bc91",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/poker.js",
+      "remoteBytes": 27504,
+      "remoteSha256": "2230820b802454d1da58573abb876861cb8852ab084d9041a592a8470cc3bc91",
+      "remoteGitBlob": "2830b5c87344b25b453abdfc362eded33edc450a",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-6b70\""
+      },
+      "headGitBlob": "2830b5c87344b25b453abdfc362eded33edc450a",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/horses.js",
+      "localBytes": 29682,
+      "localSha256": "f424f092b7332fcc91d6db7391e05b3976263d5d384dca71e9796e92a3fdeae3",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/horses.js",
+      "remoteBytes": 29682,
+      "remoteSha256": "f424f092b7332fcc91d6db7391e05b3976263d5d384dca71e9796e92a3fdeae3",
+      "remoteGitBlob": "a9172336f772caf25f26ce9e6189c93982908b6a",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-73f2\""
+      },
+      "headGitBlob": "a9172336f772caf25f26ce9e6189c93982908b6a",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/games/vault.js",
+      "localBytes": 7900,
+      "localSha256": "2231fc5bcb4afaa657a585cab03b5c4818e4494f11653c59b1e9e0179555a7f9",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/games/vault.js",
+      "remoteBytes": 7900,
+      "remoteSha256": "2231fc5bcb4afaa657a585cab03b5c4818e4494f11653c59b1e9e0179555a7f9",
+      "remoteGitBlob": "1d25c09491fc0c5d2c8de506c0fc51d5da747d5b",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-1edc\""
+      },
+      "headGitBlob": "1d25c09491fc0c5d2c8de506c0fc51d5da747d5b",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/pages.js",
+      "localBytes": 69645,
+      "localSha256": "2528529a94b7ed60c7f4a1c6d09ea133756c02c0039ef84850b88eee2da54230",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/pages.js",
+      "remoteBytes": 69645,
+      "remoteSha256": "2528529a94b7ed60c7f4a1c6d09ea133756c02c0039ef84850b88eee2da54230",
+      "remoteGitBlob": "071ab31ee7d7b13871354ccef057ff20bd96f8d5",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-1100d\""
+      },
+      "headGitBlob": "071ab31ee7d7b13871354ccef057ff20bd96f8d5",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    },
+    {
+      "file": "src/js/main.js",
+      "localBytes": 6948,
+      "localSha256": "db2c9d203ed7465d5092b3ce1a0de775b3fe4bbb67642340e5bfea8cdcbb9f7a",
+      "remoteStatus": 200,
+      "remoteFinalUrl": "https://casifox.github.io/neon-jackpot/src/js/main.js",
+      "remoteBytes": 6948,
+      "remoteSha256": "db2c9d203ed7465d5092b3ce1a0de775b3fe4bbb67642340e5bfea8cdcbb9f7a",
+      "remoteGitBlob": "97d253d6b82257eb070c36eab72627d5df8a50d2",
+      "remoteHeaders": {
+        "cache-control": "max-age=600",
+        "age": "0",
+        "last-modified": "Tue, 10 Nov 2026 21:38:30 GMT",
+        "etag": "\"6af38ed6-1b24\""
+      },
+      "headGitBlob": "97d253d6b82257eb070c36eab72627d5df8a50d2",
+      "localSameAsRemoteSha256": true,
+      "localSameAsRemoteEolNormalized": true,
+      "remoteSameAsHeadBlob": true
+    }
+  ],
+  "commitsScanned": [
+    {
+      "sha": "17614ca5dae7715b1ccef4ff0f6e12bfe3f2e93e",
+      "date": "2026-11-10T22:38:05+01:00",
+      "subject": "v1.5.1 - auto-achat global, Croupier, defis couche 4 et manches en arriere-plan",
+      "matchedFiles": 26,
+      "totalFiles": 26
+    },
+    {
+      "sha": "e2bcd6afb59ce8756733d5a09ce0286bf9b511ff",
+      "date": "2026-11-10T22:21:57+01:00",
+      "subject": "docs: resume des corrections v1.4.1",
+      "matchedFiles": 13,
+      "totalFiles": 26
+    },
+    {
+      "sha": "bff4f4e9eafad38f0f23f7d4edfe288e6ea3d0b0",
+      "date": "2026-11-10T22:19:09+01:00",
+      "subject": "v1.4.1 - equilibrage slots, auto securise, mines et UI",
+      "matchedFiles": 13,
+      "totalFiles": 26
+    },
+    {
+      "sha": "fb39f7fd3b164fa4de229f3c15d42f7b0fb3ec1d",
+      "date": "2026-11-10T21:36:39+01:00",
+      "subject": "v1.3.4 - audit fixes: statistiques Crash, libelles auto-save et messages",
+      "matchedFiles": 7,
+      "totalFiles": 26
+    },
+    {
+      "sha": "ed7663a61eb99153a79cccdbae93c3033540bc7f",
+      "date": "2026-11-10T21:13:44+01:00",
+      "subject": "v1.3.3 - stabilisation des observers canvas",
+      "matchedFiles": 7,
+      "totalFiles": 26
+    },
+    {
+      "sha": "7107025c6386675d70f742cf67d7509a16c6997c",
+      "date": "2026-11-10T21:10:57+01:00",
+      "subject": "Neon Jackpot v1.3.2 - casino incremental, Plinko physique et auto partout",
+      "matchedFiles": 7,
+      "totalFiles": 26
+    }
+  ],
+  "bestCommit": {
+    "sha": "17614ca5dae7715b1ccef4ff0f6e12bfe3f2e93e",
+    "date": "2026-11-10T22:38:05+01:00",
+    "subject": "v1.5.1 - auto-achat global, Croupier, defis couche 4 et manches en arriere-plan",
+    "matchedFiles": 26,
+    "totalFiles": 26
+  },
+  "fullMatchCommits": [
+    "17614ca5dae7715b1ccef4ff0f6e12bfe3f2e93e"
+  ]
+}

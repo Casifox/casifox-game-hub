@@ -1,0 +1,13 @@
+{
+  "id": "T-LYING-01",
+  "bug": "BUG-the-lying-game-001",
+  "url": "https://casifox.github.io/the-lying-game/",
+  "canvasCount": 1,
+  "matchMediaCallsIn10s": 0,
+  "viewport": "1366x768",
+  "status": "TEST RÉUSSI",
+  "detail": "aucun appel de cadrage portrait pendant la partie en paysage",
+  "evidence": {
+    "pageErrors": []
+  }
+}

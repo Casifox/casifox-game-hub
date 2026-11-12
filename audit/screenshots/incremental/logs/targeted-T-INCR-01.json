@@ -1,0 +1,16 @@
+{
+  "id": "T-INCR-01",
+  "bug": "BUG-incremental-001",
+  "url": "https://casifox.github.io/neon-jackpot/",
+  "status": "TEST RÉUSSI",
+  "detail": "copie de secours présente : neon_jackpot_save_v1.backup.1794475018824",
+  "evidence": {
+    "afterLoadPrefix": "{\"version\":1,\"createdAt\":1794475018825,\"lastSeen\":1794475019",
+    "triggered": true,
+    "afterSavePrefix": "{\"version\":1,\"createdAt\":1794475018825,\"lastSeen\":1794475022",
+    "backups": [
+      "neon_jackpot_save_v1.backup.1794475018824"
+    ],
+    "pageErrors": []
+  }
+}

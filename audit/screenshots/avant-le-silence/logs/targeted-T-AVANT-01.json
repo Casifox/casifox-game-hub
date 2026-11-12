@@ -1,0 +1,16 @@
+{
+  "id": "T-AVANT-01",
+  "bug": "BUG-avant-le-silence-001",
+  "url": "https://casifox.github.io/avant-le-silence/",
+  "startButtonClicked": "Commencer le parcours",
+  "status": "TEST RÉUSSI",
+  "detail": "copie de secours présente : avant-le-silence.save.v1.backup.1794475018606",
+  "evidence": {
+    "afterLoadPrefix": "{",
+    "afterSavePrefix": "{\"version\":1,\"createdAt\":\"2026-11-12T09:16:58.605Z\",\"updated",
+    "backups": [
+      "avant-le-silence.save.v1.backup.1794475018606"
+    ],
+    "pageErrors": []
+  }
+}

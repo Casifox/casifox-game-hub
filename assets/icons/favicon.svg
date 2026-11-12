@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CASIFOX GAME HUB">
+  <rect width="64" height="64" rx="15" fill="#0b0b14"/>
+  <path d="M12 18l20-9 20 9v14c0 12-9 20-20 25-11-5-20-13-20-25V18z" fill="none" stroke="#ff3d7f" stroke-width="3"/>
+  <path d="M21 26l11 8 11-8" fill="none" stroke="#c8ff3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="43" r="2.5" fill="#3de1ff"/>
+</svg>

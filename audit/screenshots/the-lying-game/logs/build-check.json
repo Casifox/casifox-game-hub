@@ -1,0 +1,140 @@
+{
+  "test": "verification du build teste (docs/)",
+  "repo": "C:\\Users\\Noah\\Documents\\the-lying-game",
+  "docsFiles": [
+    {
+      "path": "docs\\.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs\\apple-touch-icon.png",
+      "bytes": 1675,
+      "sha256": "6deb146b75834f6893d1cdc6ec8e421806573befd0243450cfa27efcc1388969"
+    },
+    {
+      "path": "docs\\assets\\index-Cxis6QE9.css",
+      "bytes": 76479,
+      "sha256": "15b3579a2343214266d97e8dd02a211fddef668357396c8c2e28a278aa1721ac"
+    },
+    {
+      "path": "docs\\assets\\index-LqqsWSX1.js",
+      "bytes": 1436638,
+      "sha256": "64fbe48cb8b1a4041dda83f886f566118fb8fb1bb529dfa99a419ca1df39f97c"
+    },
+    {
+      "path": "docs\\assets\\jetbrains-mono-cyrillic-wght-normal-D73BlboJ.woff2",
+      "bytes": 12108,
+      "sha256": "d274604c40757f98f07df623a8b8fb5194508a6fa4f5413a7a107f09e3b7452a"
+    },
+    {
+      "path": "docs\\assets\\jetbrains-mono-greek-wght-normal-Bw9x6K1M.woff2",
+      "bytes": 9004,
+      "sha256": "ee863198077f3093ffa81c072581cc4bd608a04e60a8a9c0b846396ce4f14109"
+    },
+    {
+      "path": "docs\\assets\\jetbrains-mono-latin-ext-wght-normal-DBQx-q_a.woff2",
+      "bytes": 15196,
+      "sha256": "79bfdab9ba467e26eea4122e6f2567e188dd8a09a8c730d501fc487c4ab99c6e"
+    },
+    {
+      "path": "docs\\assets\\jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+      "bytes": 40404,
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e"
+    },
+    {
+      "path": "docs\\assets\\jetbrains-mono-vietnamese-wght-normal-Bt-aOZkq.woff2",
+      "bytes": 7504,
+      "sha256": "2288795da89dd97e648954b96e22b4501bd85dfc453264460b252f888b582ca2"
+    },
+    {
+      "path": "docs\\assets\\space-grotesk-latin-ext-wght-normal-D9tNdqV9.woff2",
+      "bytes": 18940,
+      "sha256": "952dddb45d2f96f71cbf3b7f510b24379afc3c89ea02fcf89d377b45d62c0166"
+    },
+    {
+      "path": "docs\\assets\\space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+      "bytes": 22288,
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    },
+    {
+      "path": "docs\\assets\\space-grotesk-vietnamese-wght-normal-D0rl6rjA.woff2",
+      "bytes": 6712,
+      "sha256": "8895e3d49825128bfa5238e4c96e9b432d7a3dadbe5c17c6081267398305dc71"
+    },
+    {
+      "path": "docs\\favicon.svg",
+      "bytes": 468,
+      "sha256": "caf1b7de66d9c823d4bca47549e821465519e4f30ef930f72fe772602ba6753e"
+    },
+    {
+      "path": "docs\\icon-192.png",
+      "bytes": 1675,
+      "sha256": "6deb146b75834f6893d1cdc6ec8e421806573befd0243450cfa27efcc1388969"
+    },
+    {
+      "path": "docs\\icon-512.png",
+      "bytes": 4519,
+      "sha256": "02f1aa9ee10b91fc7eb8260a7392d9a9d152aad9220d304c2392766cbb52d469"
+    },
+    {
+      "path": "docs\\index.html",
+      "bytes": 18642,
+      "sha256": "66ec4d4c44d192993c6a286b898422c92365ec4e25972efadece98886564ee07"
+    },
+    {
+      "path": "docs\\manifest.json",
+      "bytes": 707,
+      "sha256": "3d3a2fff53bf08da467cef1fe09fe3c661b60be0d36f01fdbe1e75967a713da9"
+    },
+    {
+      "path": "docs\\og-image.png",
+      "bytes": 249926,
+      "sha256": "be777cb24a7102a50bb0631a87985c29a504b22e5eb6ea0fdba076f8eb80d265"
+    },
+    {
+      "path": "docs\\og-image.svg",
+      "bytes": 1855,
+      "sha256": "42359ed16448f80414223fce55f48f5f8d7c0493b04de4c8e6c743fa00a9207d"
+    },
+    {
+      "path": "docs\\robots.txt",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    }
+  ],
+  "bundle": "docs\\assets\\index-LqqsWSX1.js",
+  "bundleOccurrences": {
+    "max-width: 600px) and (orientation: portrait": 1,
+    "the-lying-game.save.v1": 1,
+    "the-lying-game.archive.v1": 1,
+    "the-lying-game.settings.v1": 1
+  },
+  "git": {
+    "head": "be0aae551335b284ef70c2b07d0844f85058a455",
+    "remotes": "(aucun remote)",
+    "docsTracked": [
+      "docs/.nojekyll",
+      "docs/apple-touch-icon.png",
+      "docs/assets/index-Cxis6QE9.css",
+      "docs/assets/index-LqqsWSX1.js",
+      "docs/assets/jetbrains-mono-cyrillic-wght-normal-D73BlboJ.woff2",
+      "docs/assets/jetbrains-mono-greek-wght-normal-Bw9x6K1M.woff2",
+      "docs/assets/jetbrains-mono-latin-ext-wght-normal-DBQx-q_a.woff2",
+      "docs/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+      "docs/assets/jetbrains-mono-vietnamese-wght-normal-Bt-aOZkq.woff2",
+      "docs/assets/space-grotesk-latin-ext-wght-normal-D9tNdqV9.woff2",
+      "docs/assets/space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+      "docs/assets/space-grotesk-vietnamese-wght-normal-D0rl6rjA.woff2",
+      "docs/favicon.svg",
+      "docs/icon-192.png",
+      "docs/icon-512.png",
+      "docs/index.html",
+      "docs/manifest.json",
+      "docs/og-image.png",
+      "docs/og-image.svg",
+      "docs/robots.txt"
+    ],
+    "docsStatus": "(docs/ sans modification)"
+  }
+}

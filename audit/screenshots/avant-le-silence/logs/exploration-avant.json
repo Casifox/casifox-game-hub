@@ -1,0 +1,162 @@
+[
+  {
+    "browserVersion": "158.0.8127.18"
+  },
+  {
+    "label": "accueil",
+    "hash": "#/accueil",
+    "buttons": [
+      {
+        "text": "Commencer le parcours",
+        "aria": null,
+        "cls": "btn btn--primary",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Continuer",
+        "aria": null,
+        "cls": "btn btn--secondary",
+        "disabled": true,
+        "itemKey": null
+      },
+      {
+        "text": "Explorer les sources",
+        "aria": null,
+        "cls": "btn btn--quiet",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "À propos du projet",
+        "aria": null,
+        "cls": "btn btn--quiet",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Paramètres",
+        "aria": null,
+        "cls": "btn btn--quiet",
+        "disabled": false,
+        "itemKey": null
+      }
+    ]
+  },
+  {
+    "label": "avertissement",
+    "hash": "#/avertissement",
+    "buttons": [
+      {
+        "text": "",
+        "aria": "Revenir à l'accueil",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "J'ai compris, continuer",
+        "aria": null,
+        "cls": "btn btn--primary",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Revenir à l'accueil",
+        "aria": null,
+        "cls": "btn btn--quiet",
+        "disabled": false,
+        "itemKey": null
+      }
+    ]
+  },
+  {
+    "label": "apres-avertissement",
+    "hash": "#/introduction",
+    "buttons": [
+      {
+        "text": "",
+        "aria": "Revenir à l'accueil",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Commencer le parcours",
+        "aria": null,
+        "cls": "btn btn--primary",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Revenir à l'accueil",
+        "aria": null,
+        "cls": "btn btn--quiet",
+        "disabled": false,
+        "itemKey": null
+      }
+    ]
+  },
+  {
+    "label": "apres-prologue",
+    "hash": "#/chapitres",
+    "buttons": [
+      {
+        "text": "Accueil",
+        "aria": "Accueil",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Carnet de mémoire",
+        "aria": "Carnet de mémoire",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Chronologie",
+        "aria": "Chronologie",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Paramètres",
+        "aria": "Paramètres",
+        "cls": "btn btn--icon",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Sources",
+        "aria": null,
+        "cls": "btn btn--ghost btn--small",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Glossaire",
+        "aria": null,
+        "cls": "btn btn--ghost btn--small",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "À propos",
+        "aria": null,
+        "cls": "btn btn--ghost btn--small",
+        "disabled": false,
+        "itemKey": null
+      },
+      {
+        "text": "Paramètres",
+        "aria": null,
+        "cls": "btn btn--ghost btn--small",
+        "disabled": false,
+        "itemKey": null
+      }
+    ]
+  }
+]

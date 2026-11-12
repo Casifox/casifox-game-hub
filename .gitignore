@@ -1,0 +1,9 @@
+# Dépendances et copies de travail de l'outillage d'audit
+audit-tools/node_modules/
+audit-tools/workspaces/
+audit-tools/tests/*.log
+
+# Fichiers temporaires
+*.log
+.DS_Store
+Thumbs.db

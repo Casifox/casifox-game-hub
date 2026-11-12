@@ -1,0 +1,10 @@
+{
+  "id": "T-INCR-03",
+  "bug": "BUG-incremental-003",
+  "url": "https://casifox.github.io/neon-jackpot/",
+  "status": "TEST RÉUSSI",
+  "detail": "aucune pollution (locale ni globale)",
+  "evidence": {
+    "prototypeIsObjectPrototype": true
+  }
+}

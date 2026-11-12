@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-12T09:28:45.017Z",
+  "base": "http://127.0.0.1:8200/",
+  "results": [
+    {
+      "id": "LOAD",
+      "title": "Chargement de l'accueil",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; HTTP>=400=0 ; échecs réseau=0",
+      "evidence": null
+    },
+    {
+      "id": "CARDS",
+      "title": "Cinq cartes de jeux",
+      "status": "TEST RÉUSSI",
+      "detail": "5 carte(s) trouvée(s)",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "SEARCH",
+      "title": "Recherche instantanée par nom (5 requêtes)",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"name\":\"Doomscroll Dungeon\",\"count\":1,\"first\":\"Doomscroll Dungeon\"},{\"name\":\"The Lying Game\",\"count\":1,\"first\":\"The Lying Game\"},{\"name\":\"Neon Jackpot\",\"count\":1,\"first\":\"Neon Jackpot\"},{\"name\":\"Quand les notes s'effacent\",\"count\":1,\"first\":\"Quand les notes s'effacent\"},{\"name\":\"AVANT LE SILENCE\",\"count\":1,\"first\":\"AVANT LE SILENCE\"}]",
+      "evidence": null
+    },
+    {
+      "id": "FILTERS",
+      "title": "Filtres par genre (toutes les puces)",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"genre\":\"Tous\",\"count\":5},{\"genre\":\"Action / Roguelite\",\"count\":1},{\"genre\":\"Aventure / Puzzle narratif\",\"count\":1},{\"genre\":\"Incremental / Casino\",\"count\":1},{\"genre\":\"Narratif / Documentaire\",\"count\":1},{\"genre\":\"Narratif / Musique\",\"count\":1}]",
+      "evidence": null
+    },
+    {
+      "id": "SORTS",
+      "title": "Tris note décroissante, croissante, A–Z, récent",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"sort\":\"score-desc\",\"first\":\"Doomscroll Dungeon\",\"expected\":\"Doomscroll Dungeon\"},{\"sort\":\"score-asc\",\"first\":\"AVANT LE SILENCE\",\"expected\":\"AVANT LE SILENCE\"},{\"sort\":\"name-asc\",\"first\":\"AVANT LE SILENCE\",\"expected\":\"AVANT LE SILENCE\"},{\"sort\":\"recent\",\"first\":\"The Lying Game\",\"expected\":\"The Lying Game\"}]",
+      "evidence": null
+    },
+    {
+      "id": "CARD-LINKS",
+      "title": "Liens « Jouer » et « Fiche » de chaque carte",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"name\":\"Doomscroll Dungeon\",\"play\":\"https://casifox.github.io/doomscroll-dungeon/\",\"detail\":\"games/doomscroll-dungeon/\"},{\"name\":\"The Lying Game\",\"play\":\"https://casifox.github.io/the-lying-game/\",\"detail\":\"games/the-lying-game/\"},{\"name\":\"Neon Jackpot\",\"play\":\"https://casifox.github.io/neon-jackpot/\",\"detail\":\"games/incremental/\"},{\"name\":\"Quand les notes s'effacent\",\"play\":\"https://casifox.github.io/quand-les-notes-seffacent/\",\"detail\":\"games/quand-les-notes-seffacent/\"},{\"name\":\"AVANT LE SILENCE\",\"play\":\"https://casifox.github.io/avant-le-silence/\",\"detail\":\"games/avant-le-silence/\"}]",
+      "evidence": null
+    },
+    {
+      "id": "RANKING",
+      "title": "Classement visible et trié",
+      "status": "TEST RÉUSSI",
+      "detail": "5 lignes ; scores=82/100, 81/100, 80/100, 75/100, 72/100",
+      "evidence": null
+    },
+    {
+      "id": "NAV",
+      "title": "Navigation et ancres",
+      "status": "TEST RÉUSSI",
+      "detail": "liens=#selection, #jeux, #classement, #nouveautes, #univers ; manquants=aucun",
+      "evidence": null
+    },
+    {
+      "id": "IMAGES",
+      "title": "Chargement de toutes les images",
+      "status": "TEST RÉUSSI",
+      "detail": "7/7 images chargées",
+      "evidence": null
+    },
+    {
+      "id": "META",
+      "title": "Titre, description, Open Graph, favicon, canonical",
+      "status": "TEST RÉUSSI",
+      "detail": "{\"title\":\"CASIFOX GAME HUB — Cinq jeux, une même exigence\",\"description\":\"CASIFOX GAME HUB : cinq jeux indépendants, notes d'audit réelles et liens directs vers chaque jeu en ligne. Aucune statistique simulée.\",\"og\":\"CASIFOX GAME HUB — Cinq jeux, une même exigence\",\"favicon\":\"assets/icons/favicon.svg\",\"canonical\":\"https://casifox.github.io/casifox-game-hub/\"}",
+      "evidence": null
+    },
+    {
+      "id": "DETAILS",
+      "title": "Cinq fiches détaillées",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"slug\":\"doomscroll-dungeon\",\"h1\":\"Doomscroll Dungeon\",\"play\":\"https://casifox.github.io/doomscroll-dungeon/\",\"repo\":\"https://github.com/Casifox/doomscroll-dungeon\",\"scoreText\":\"Note 82/100\",\"errors\":0},{\"slug\":\"the-lying-game\",\"h1\":\"The Lying Game\",\"play\":\"https://casifox.github.io/the-lying-game/\",\"repo\":\"https://github.com/Casifox/the-lying-game\",\"scoreText\":\"Note 81/100\",\"errors\":0},{\"slug\":\"incremental\",\"h1\":\"Neon Jackpot\",\"play\":\"https://casifox.github.io/neon-jackpot/\",\"repo\":\"https://github.com/Casifox/neon-jackpot\",\"scoreText\":\"Note 80/100\",\"errors\":0},{\"slug\":\"quand-les-notes-seffacent\",\"h1\":\"Quand les notes s'effacent\",\"play\":\"https://casifox.github.io/quand-les-notes-seffacent/\",\"repo\":\"https://github.com/Casifox/quand-les-notes-seffacent\",\"scoreText\":\"Note 75/100\",\"errors\":0},{\"slug\":\"avant-le-silence\",\"h1\":\"AVANT LE SILENCE\",\"play\":\"https://casifox.github.io/avant-le-silence/\",\"repo\":\"https://github.com/Casifox/avant-le-silence\",\"scoreText\":\"Note 72/100\",\"errors\":0}]",
+      "evidence": "02-fiche.png"
+    },
+    {
+      "id": "404",
+      "title": "Page 404",
+      "status": "TEST RÉUSSI",
+      "detail": "titre=Page introuvable ; erreurs=0",
+      "evidence": "03-404.png"
+    },
+    {
+      "id": "INTERNAL-LINKS",
+      "title": "Liens internes de l'accueil",
+      "status": "TEST RÉUSSI",
+      "detail": "[{\"href\":\"index.html\",\"status\":200},{\"href\":\"games/doomscroll-dungeon/\",\"status\":200},{\"href\":\"games/the-lying-game/\",\"status\":200},{\"href\":\"games/incremental/\",\"status\":200},{\"href\":\"games/quand-les-notes-seffacent/\",\"status\":200},{\"href\":\"games/avant-le-silence/\",\"status\":200},{\"href\":\"audit/SCORES.md\",\"status\":200},{\"href\":\"audit/BUGS.md\",\"status\":200},{\"href\":\"audit/FINAL-REPORT.md\",\"status\":200},{\"href\":\"AUDIT.md\",\"status\":200},{\"href\":\"audit/PUBLICATION.md\",\"status\":200},{\"href\":\"README.md\",\"status\":200}]",
+      "evidence": null
+    },
+    {
+      "id": "KEYBOARD",
+      "title": "Premier focus clavier sur le lien d'évitement",
+      "status": "TEST RÉUSSI",
+      "detail": "élément focalisé : skip-link",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Hub en 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Hub en 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Hub en 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement=false (scrollWidth 768 ; innerWidth 768) ; erreurs=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Hub en 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement=false (scrollWidth 390 ; innerWidth 390) ; erreurs=0",
+      "evidence": "vp-390.png"
+    },
+    {
+      "id": "REDUCED-MOTION",
+      "title": "Préférence « mouvement réduit » respectée",
+      "status": "TEST RÉUSSI",
+      "detail": "0 bloc(s) encore masqué(s)",
+      "evidence": null
+    }
+  ],
+  "console": [],
+  "pageErrors": [],
+  "httpErrors": [],
+  "failedRequests": []
+}

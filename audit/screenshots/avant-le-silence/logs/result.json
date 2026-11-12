@@ -1,0 +1,640 @@
+{
+  "slug": "avant-le-silence",
+  "startedAt": "2026-11-12T09:17:52.044Z",
+  "steps": [
+    {
+      "id": "LOAD",
+      "title": "Chargement initial (1920x1080, 5 s de stabilisation)",
+      "status": "TEST RÉUSSI",
+      "detail": "erreurs JS=0 ; réponses HTTP>=400=0 ; requêtes en échec=0 ; console error/warning=0",
+      "evidence": "01-accueil.png"
+    },
+    {
+      "id": "VERSION",
+      "title": "Concordance version publique / HEAD (index.html)",
+      "status": "TEST RÉUSSI",
+      "detail": "SHA256 servi=E435FAC1DA7D58FB… ; SHA256 HEAD=E435FAC1DA7D58FB… (index.html)",
+      "evidence": null
+    },
+    {
+      "id": "START",
+      "title": "Démarrage : bouton identifié par son libellé",
+      "status": "TEST RÉUSSI",
+      "detail": "bouton cliqué : « Commencer le parcours » ; texte visible 631 → 808",
+      "evidence": "02-apres-demarrage.png"
+    },
+    {
+      "id": "PLAY-30S",
+      "title": "Parcours de 30 s par boutons de progression (heuristique par libellé)",
+      "status": "TEST RÉUSSI",
+      "detail": "clics=6 ; libellés : {\"J'ai compris, continuer\":1,\"Commencer le parcours\":1,\"Ouvrir\":1,\"Espace suivant\":3} ; erreurs JS=0 ; texte visible 808 → 1264",
+      "evidence": "04-jeu-30s.png"
+    },
+    {
+      "id": "PAUSE",
+      "title": "Menu ou pause",
+      "status": "TEST NON EFFECTUÉ",
+      "detail": "aucun bouton de pause ou de menu visible dans le parcours testé",
+      "evidence": null
+    },
+    {
+      "id": "PERSIST",
+      "title": "Sauvegarde présente après rechargement (avant-le-silence.save.v1)",
+      "status": "TEST RÉUSSI",
+      "detail": "clé avant=true ; après=true",
+      "evidence": null
+    },
+    {
+      "id": "VP-1920",
+      "title": "Affichage 1920x1080",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1920 ; innerWidth 1920) ; erreurs JS=0",
+      "evidence": "vp-1920.png"
+    },
+    {
+      "id": "VP-1366",
+      "title": "Affichage 1366x768",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 1366 ; innerWidth 1366) ; erreurs JS=0",
+      "evidence": "vp-1366.png"
+    },
+    {
+      "id": "VP-768",
+      "title": "Affichage 768x1024",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 768 ; innerWidth 768) ; erreurs JS=0",
+      "evidence": "vp-768.png"
+    },
+    {
+      "id": "VP-390",
+      "title": "Affichage 390x844 (mobile, tactile)",
+      "status": "TEST RÉUSSI",
+      "detail": "débordement horizontal=false (scrollWidth 390 ; innerWidth 390) ; erreurs JS=0",
+      "evidence": "vp-390.png"
+    }
+  ],
+  "metrics": {
+    "timings": {
+      "domContentLoadedMs": 957,
+      "loadMs": 957
+    },
+    "fps": {
+      "seconds": 10,
+      "perSecond": [
+        61,
+        61,
+        60,
+        60,
+        61,
+        59,
+        61,
+        60,
+        61
+      ],
+      "avgFps": 60.4,
+      "minFps": 59
+    },
+    "heapBytes": 10000000
+  },
+  "viewports": [
+    {
+      "viewport": "1920",
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "1366",
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "768",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    {
+      "viewport": "390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "pageErrors": 0,
+      "httpErrors": 0
+    }
+  ],
+  "logs": {
+    "console": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "resources": [
+      {
+        "url": "https://casifox.github.io/avant-le-silence/",
+        "status": 200,
+        "bytes": 2783
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/documents.css?v=0.8.0",
+        "status": 200,
+        "bytes": 9601
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/typography.css?v=0.8.0",
+        "status": 200,
+        "bytes": 3260
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/global.css?v=0.8.0",
+        "status": 200,
+        "bytes": 5265
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/layout.css?v=0.8.0",
+        "status": 200,
+        "bytes": 18393
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/accessibility.css?v=0.8.0",
+        "status": 200,
+        "bytes": 5097
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/responsive.css?v=0.8.0",
+        "status": 200,
+        "bytes": 8813
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/interface.css?v=0.8.0",
+        "status": 200,
+        "bytes": 14291
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/main.js?v=0.8.0",
+        "status": 200,
+        "bytes": 640
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/chapters.css?v=0.8.0",
+        "status": 200,
+        "bytes": 12590
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/application.js",
+        "status": 200,
+        "bytes": 13834
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/backgrounds/paper-texture.svg",
+        "status": 200,
+        "bytes": 890
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/info-screens.js",
+        "status": 200,
+        "bytes": 19767
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/exploration.js",
+        "status": 200,
+        "bytes": 3419
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/memory-notebook.js",
+        "status": 200,
+        "bytes": 5495
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/modal.js",
+        "status": 200,
+        "bytes": 5910
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/progress-system.js",
+        "status": 200,
+        "bytes": 6553
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/settings-ui.js",
+        "status": 200,
+        "bytes": 10833
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/state-manager.js",
+        "status": 200,
+        "bytes": 3258
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/navigation.js",
+        "status": 200,
+        "bytes": 1815
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/document-system.js",
+        "status": 200,
+        "bytes": 2398
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/event-manager.js",
+        "status": 200,
+        "bytes": 1061
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/audio-system.js",
+        "status": 200,
+        "bytes": 6841
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/notebook-ui.js",
+        "status": 200,
+        "bytes": 12660
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/home-screen.js",
+        "status": 200,
+        "bytes": 9114
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/chronology-ui.js",
+        "status": 200,
+        "bytes": 9775
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/helpers.js",
+        "status": 200,
+        "bytes": 9577
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/validation.js",
+        "status": 200,
+        "bytes": 6057
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/accessibility.js",
+        "status": 200,
+        "bytes": 2771
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/page-shell.js",
+        "status": 200,
+        "bytes": 3930
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/paths.js",
+        "status": 200,
+        "bytes": 3003
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/chronology-system.js",
+        "status": 200,
+        "bytes": 2151
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/chapter-screen.js",
+        "status": 200,
+        "bytes": 34564
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/save-manager.js",
+        "status": 200,
+        "bytes": 2148
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/migrations.js",
+        "status": 200,
+        "bytes": 914
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/document-viewer.js",
+        "status": 200,
+        "bytes": 15097
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/save-validator.js",
+        "status": 200,
+        "bytes": 5556
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/activity-ui.js",
+        "status": 200,
+        "bytes": 11296
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/glossary.json",
+        "status": 200,
+        "bytes": 4308
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/sources.json",
+        "status": 200,
+        "bytes": 6239
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/timeline.json",
+        "status": 200,
+        "bytes": 7420
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/people.json",
+        "status": 200,
+        "bytes": 7721
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/documents.json",
+        "status": 200,
+        "bytes": 29178
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/narratives.json",
+        "status": 200,
+        "bytes": 8766
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/chapters.json",
+        "status": 200,
+        "bytes": 55653
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/maison-exterieur.svg",
+        "status": 200,
+        "bytes": 8126
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/galerie-photos.svg",
+        "status": 200,
+        "bytes": 5486
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/ceremonie.svg",
+        "status": 200,
+        "bytes": 3891
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/salle-recueil.svg",
+        "status": 200,
+        "bytes": 3574
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/bureau-colonie.svg",
+        "status": 200,
+        "bytes": 6603
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/cour-enfants.svg",
+        "status": 200,
+        "bytes": 5808
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/interieur-quotidien.svg",
+        "status": 200,
+        "bytes": 6401
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/",
+        "status": 200,
+        "bytes": 2783
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/global.css?v=0.8.0",
+        "status": 200,
+        "bytes": 5265
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/typography.css?v=0.8.0",
+        "status": 200,
+        "bytes": 3260
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/layout.css?v=0.8.0",
+        "status": 200,
+        "bytes": 18393
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/interface.css?v=0.8.0",
+        "status": 200,
+        "bytes": 14291
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/documents.css?v=0.8.0",
+        "status": 200,
+        "bytes": 9601
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/chapters.css?v=0.8.0",
+        "status": 200,
+        "bytes": 12590
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/responsive.css?v=0.8.0",
+        "status": 200,
+        "bytes": 8813
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/css/accessibility.css?v=0.8.0",
+        "status": 200,
+        "bytes": 5097
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/main.js?v=0.8.0",
+        "status": 200,
+        "bytes": 640
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/backgrounds/paper-texture.svg",
+        "status": 200,
+        "bytes": 890
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/application.js",
+        "status": 200,
+        "bytes": 13834
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/info-screens.js",
+        "status": 200,
+        "bytes": 19767
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/paths.js",
+        "status": 200,
+        "bytes": 3003
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/validation.js",
+        "status": 200,
+        "bytes": 6057
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/accessibility.js",
+        "status": 200,
+        "bytes": 2771
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/utils/helpers.js",
+        "status": 200,
+        "bytes": 9577
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/event-manager.js",
+        "status": 200,
+        "bytes": 1061
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/state-manager.js",
+        "status": 200,
+        "bytes": 3258
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/core/navigation.js",
+        "status": 200,
+        "bytes": 1815
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/exploration.js",
+        "status": 200,
+        "bytes": 3419
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/document-system.js",
+        "status": 200,
+        "bytes": 2398
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/chronology-system.js",
+        "status": 200,
+        "bytes": 2151
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/memory-notebook.js",
+        "status": 200,
+        "bytes": 5495
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/progress-system.js",
+        "status": 200,
+        "bytes": 6553
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/systems/audio-system.js",
+        "status": 200,
+        "bytes": 6841
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/home-screen.js",
+        "status": 200,
+        "bytes": 9114
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/chapter-screen.js",
+        "status": 200,
+        "bytes": 34564
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/chronology-ui.js",
+        "status": 200,
+        "bytes": 9775
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/notebook-ui.js",
+        "status": 200,
+        "bytes": 12660
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/settings-ui.js",
+        "status": 200,
+        "bytes": 10833
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/modal.js",
+        "status": 200,
+        "bytes": 5910
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/page-shell.js",
+        "status": 200,
+        "bytes": 3930
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/save-manager.js",
+        "status": 200,
+        "bytes": 2148
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/save-validator.js",
+        "status": 200,
+        "bytes": 5556
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/storage/migrations.js",
+        "status": 200,
+        "bytes": 914
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/document-viewer.js",
+        "status": 200,
+        "bytes": 15097
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/js/ui/activity-ui.js",
+        "status": 200,
+        "bytes": 11296
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/people.json",
+        "status": 200,
+        "bytes": 7721
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/documents.json",
+        "status": 200,
+        "bytes": 29178
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/glossary.json",
+        "status": 200,
+        "bytes": 4308
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/chapters.json",
+        "status": 200,
+        "bytes": 55653
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/timeline.json",
+        "status": 200,
+        "bytes": 7420
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/sources.json",
+        "status": 200,
+        "bytes": 6239
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/content/fr/narratives.json",
+        "status": 200,
+        "bytes": 8766
+      },
+      {
+        "url": "https://casifox.github.io/avant-le-silence/assets/illustrations/interieur-quotidien.svg",
+        "status": 200,
+        "bytes": 6401
+      }
+    ]
+  },
+  "baseUrl": "https://casifox.github.io/avant-le-silence/",
+  "finishedAt": "2026-11-12T09:19:07.185Z",
+  "sizeByType": {
+    "autre": 5566,
+    "css": 154620,
+    "js": 420874,
+    "svg": 48070,
+    "json": 238570
+  }
+}

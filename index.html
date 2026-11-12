@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CASIFOX GAME HUB — Cinq jeux, une même exigence</title>
+  <meta name="description" content="CASIFOX GAME HUB : cinq jeux indépendants, notes d'audit réelles et liens directs vers chaque jeu en ligne. Aucune statistique simulée.">
+  <meta name="theme-color" content="#07070d">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://casifox.github.io/casifox-game-hub/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CASIFOX GAME HUB — Cinq jeux, une même exigence">
+  <meta property="og:description" content="Cinq jeux indépendants, notes d'audit réelles et liens directs vers chaque jeu en ligne.">
+  <meta property="og:url" content="https://casifox.github.io/casifox-game-hub/">
+  <meta property="og:image" content="https://casifox.github.io/casifox-game-hub/assets/images/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body data-page="home" data-root="">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="CASIFOX GAME HUB, accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6l8-4 8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke="#ff3d7f" stroke-width="1.6"/><path d="M8 9l4 3 4-3" stroke="#c8ff3d" stroke-width="1.6"/></svg>
+        </span>
+        <span class="brand-name">CASIFOX <span>/ GAME HUB</span></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#selection">Sélection</a></li>
+        <li><a href="#jeux">Jeux</a></li>
+        <li><a href="#classement">Classement</a></li>
+        <li><a href="#nouveautes">Nouveautés</a></li>
+        <li><a href="#univers">Univers</a></li>
+        <li><a class="nav-github" href="https://github.com/Casifox" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="accueil">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="kicker">Cinq jeux. Une même exigence.</span>
+          <h1>CASIFOX<br><em>GAME HUB</em></h1>
+          <p class="hero-lede">Cinq jeux indépendants, testés sur leur URL publique, notés après audit. Pas de fausse popularité, pas de statistique inventée : des liens directs et des fiches qui disent ce qui marche et ce qui reste à améliorer.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#jeux">Explorer les jeux <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="games/doomscroll-dungeon/">Voir le meilleur jeu</a>
+          </div>
+          <p class="hero-note">5 jeux · notes réelles /100 · liens directs vers les jeux en ligne</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="assets/images/hero.png" width="1920" height="1080" alt="Aperçu de Doomscroll Dungeon, un fil d'actualité transformé en donjon" fetchpriority="high">
+          </div>
+          <div class="hero-chip hero-chip--score">NOTE <strong>82</strong> /100</div>
+          <div class="hero-chip hero-chip--live"><span class="live-dot" aria-hidden="true"></span> MISE À JOUR 12.11.2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="selection">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Mise en avant</span>
+            <h2 class="section-title">Le jeu en tête du classement</h2>
+          </div>
+          <a class="section-link" href="#classement">Voir le classement complet →</a>
+        </div>
+        <div id="featured"></div>
+      </div>
+    </section>
+
+    <section class="section" id="jeux">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Catalogue</span>
+            <h2 class="section-title">Les cinq jeux</h2>
+          </div>
+          <p class="section-lede">Chaque carte mène au jeu en ligne et à sa fiche détaillée. Les notes proviennent de l'audit du 12 novembre 2026.</p>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span class="visually-hidden">Rechercher un jeu</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input class="search-input" id="search" type="search" placeholder="Rechercher un jeu, un genre…" autocomplete="off">
+          </label>
+          <div class="chips" id="genre-chips" role="group" aria-label="Filtrer par genre"></div>
+          <label>
+            <span class="visually-hidden">Trier les jeux</span>
+            <select class="select" id="sort">
+              <option value="score-desc">Note décroissante</option>
+              <option value="score-asc">Note croissante</option>
+              <option value="name-asc">Nom A–Z</option>
+              <option value="recent">Plus récent</option>
+            </select>
+          </label>
+        </div>
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="games-grid" id="games-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <p><strong>Aucun jeu ne correspond à cette recherche.</strong></p>
+          <p>Effacez le filtre ou choisissez un autre genre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="classement">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Classement</span>
+            <h2 class="section-title">Notes après audit</h2>
+          </div>
+          <p class="section-lede">Sur 100, avec le détail par critère dans chaque fiche. Les notes « avant » et « après » corrections sont dans les fiches.</p>
+        </div>
+        <div class="ranking" id="ranking" role="table" aria-label="Classement des cinq jeux"></div>
+        <div class="rank-links">
+          <a href="audit/SCORES.md">Notation détaillée (SCORES.md)</a>
+          <a href="audit/BUGS.md">Bugs et corrections (BUGS.md)</a>
+          <a href="audit/FINAL-REPORT.md">Rapport final (FINAL-REPORT.md)</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nouveautes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Journal</span>
+            <h2 class="section-title">Nouveautés</h2>
+          </div>
+          <p class="section-lede">Dates issues de l'historique Git et du rapport de publication. Aucune date inventée.</p>
+        </div>
+        <ul class="news-list">
+          <li class="news-item">
+            <time class="news-date" datetime="2026-11-12">12.11.2026</time>
+            <div><strong>Trois jeux mis en ligne</strong><span>AVANT LE SILENCE, Quand les notes s'effacent et The Lying Game sont publiés sur GitHub Pages et testés sur leur URL publique.</span></div>
+          </li>
+          <li class="news-item">
+            <time class="news-date" datetime="2026-11-12">12.11.2026</time>
+            <div><strong>Corrections d'audit</strong><span>Sécurité de l'import de sauvegarde (Neon Jackpot), copie de secours (AVANT LE SILENCE), minuteur et sauvegarde (The Lying Game), graine assainie (Doomscroll Dungeon).</span></div>
+          </li>
+          <li class="news-item">
+            <time class="news-date" datetime="2026-11-10">10.11.2026</time>
+            <div><strong>Neon Jackpot v1.5.1</strong><span>Auto-achat global, croupier, défis de couche 4 et manches en arrière-plan.</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="univers">
+      <div class="wrap">
+        <div class="universe">
+          <div>
+            <span class="kicker">Univers CASIFOX</span>
+            <h2 class="section-title">Cinq jeux, zéro faux chiffre</h2>
+            <p>CASIFOX GAME HUB réunit cinq projets indépendants : un roguelite satirique, un casino incrémental virtuel, une aventure puzzle qui ment, un roman musical et un parcours documentaire sur la Maison d'Izieu.</p>
+            <p>Chaque jeu garde son propre dépôt et sa propre URL. Le hub ne les héberge pas et ne déplace rien : il documente ce qui a été audité, testé et corrigé, avec les rapports accessibles.</p>
+            <p>Les notes sont des jugements argumentés à partir de tests réels. Elles ne mesurent ni la popularité ni le nombre de joueurs, qui ne sont pas suivis.</p>
+          </div>
+          <blockquote class="pull-quote">« Pas de fausse popularité, pas de statistique inventée. Des liens directs et des fiches qui disent ce qui marche et ce qui reste à améliorer. »</blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6l8-4 8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke="#ff3d7f" stroke-width="1.6"/><path d="M8 9l4 3 4-3" stroke="#c8ff3d" stroke-width="1.6"/></svg>
+            </span>
+            <span class="brand-name">CASIFOX <span>/ GAME HUB</span></span>
+          </a>
+          <p>Cinq jeux indépendants, un audit commun, des liens réels. Site statique sans backend ni traceur.</p>
+        </div>
+        <div>
+          <p class="footer-title">Jeux</p>
+          <ul class="footer-links">
+            <li><a href="games/doomscroll-dungeon/">Doomscroll Dungeon</a></li>
+            <li><a href="games/the-lying-game/">The Lying Game</a></li>
+            <li><a href="games/incremental/">Neon Jackpot</a></li>
+            <li><a href="games/quand-les-notes-seffacent/">Quand les notes s'effacent</a></li>
+            <li><a href="games/avant-le-silence/">AVANT LE SILENCE</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Ressources</p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Casifox" target="_blank" rel="noopener">GitHub Casifox ↗</a></li>
+            <li><a href="AUDIT.md">Index de l'audit (AUDIT.md)</a></li>
+            <li><a href="audit/SCORES.md">Notes (SCORES.md)</a></li>
+            <li><a href="audit/PUBLICATION.md">Publication (PUBLICATION.md)</a></li>
+            <li><a href="README.md">Lancer le hub (README.md)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CASIFOX GAME HUB. Aucune donnée personnelle collectée.</span>
+        <span>Dernière mise à jour : 12.11.2026 · <a href="#accueil">Haut de page ↑</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/games.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

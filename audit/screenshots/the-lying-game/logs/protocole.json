@@ -1,0 +1,535 @@
+{
+  "test": "Protocole 8.2 adapté — The Lying Game (local, build docs/)",
+  "env": {
+    "node": "v24.22.1",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18",
+    "os": "Windows_NT 10.0.26300 x64",
+    "headless": true,
+    "locale": "fr-FR",
+    "timezone": "Europe/Paris",
+    "deviceScaleFactor": 1,
+    "baseUrl": "http://127.0.0.1:8103/"
+  },
+  "url": "http://127.0.0.1:8103/",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  },
+  "checks": {
+    "title": {
+      "dataView": "home",
+      "screenRoot": true,
+      "home": true,
+      "prologue": false,
+      "chapters": false,
+      "gallery": false,
+      "gameShell": false,
+      "dialogue": false,
+      "dialogueText": null,
+      "dialogueComplete": false,
+      "dialogueSpeaker": null,
+      "modal": false,
+      "modalButtons": [],
+      "pause": false,
+      "pauseItems": [],
+      "canvas": false,
+      "homeStartLabel": "COMMENCER L’EXPÉRIENCE",
+      "homeContinueDisabled": true,
+      "homeContinueHint": "Aucune session active. Commencez par le protocole.",
+      "homeProgress": "Aucune expérience en cours. Le protocole attend."
+    },
+    "newGameConfirmationNeeded": false,
+    "prologueClicks": 6,
+    "gameStart": {
+      "ready": true,
+      "enterPresses": 6,
+      "modalClicks": 1,
+      "modalsSeen": [
+        "OUVRIR LA PREMIÈRE SALLE"
+      ],
+      "dialogueLines": [
+        "THE HOST : Bonjour, participant 047. Je suis THE HOST.",
+        "THE HOST : Cette expérience mesure votre capacité de raisonnement. Rien de plus.",
+        "THE HOST : Quittez cette salle. Utilisez ZQSD, WASD ou les flèches. Approchez-vous des objets et appuyez sur E pour interagir, sur C pour inspecter."
+      ]
+    },
+    "rendererAtStart": {
+      "type": "webgl",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "canvasWidth": 960,
+      "canvasHeight": 540
+    },
+    "play": {
+      "holds": 25,
+      "enterPresses": 0,
+      "overlays": []
+    },
+    "screenshotHashes": {
+      "t0": "2467e07994318c6b6990af4c938d53a5a669994d62c2df2d8566b620d056d65f",
+      "t15": "eff007cb894e24b6d4f12282a6453d5f61553132d5857f4ba3b141c717bc2282",
+      "t30": "d1b26c5f0a95b265669d1fce290d46ef2305d11f97d7bb57d06ff6463bab8353"
+    },
+    "rendererAfterPlay": {
+      "type": "webgl",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "canvasWidth": 960,
+      "canvasHeight": 540
+    }
+  },
+  "pause": {
+    "open": {
+      "ok": true,
+      "items": [
+        "REPRENDRE01",
+        "PARAMÈTRES & ACCESSIBILITÉ02",
+        "RECOMMENCER LA SALLE03",
+        "REVENIR AU MENU PRINCIPAL04"
+      ]
+    },
+    "closed": {
+      "ok": true,
+      "gameShell": true
+    }
+  },
+  "restart": {
+    "titleAfterMenu": {
+      "homeStartLabel": "NOUVELLE EXPÉRIENCE",
+      "continueDisabled": false,
+      "continueHint": "Salle 01 · Réveil — TRUST"
+    },
+    "confirmationNeeded": true,
+    "gameReady": true,
+    "dialogueLines": [
+      "THE HOST : Bonjour, participant 047. Je suis THE HOST.",
+      "THE HOST : Cette expérience mesure votre capacité de raisonnement. Rien de plus.",
+      "THE HOST : Quittez cette salle. Utilisez ZQSD, WASD ou les flèches. Approchez-vous des objets et appuyez sur E pour interagir, sur C pour inspecter."
+    ],
+    "newPageErrors": [],
+    "roomRestart": {
+      "ready": true,
+      "enterPresses": 0,
+      "stateAfter3s": {
+        "dataView": "game",
+        "screenRoot": false,
+        "home": false,
+        "prologue": false,
+        "chapters": false,
+        "gallery": false,
+        "gameShell": true,
+        "dialogue": false,
+        "dialogueText": null,
+        "dialogueComplete": false,
+        "dialogueSpeaker": null,
+        "modal": false,
+        "modalButtons": [],
+        "pause": false,
+        "pauseItems": [],
+        "canvas": true,
+        "homeStartLabel": "NOUVELLE EXPÉRIENCE",
+        "homeContinueDisabled": false,
+        "homeContinueHint": "Salle 01 · Réveil — TRUST",
+        "homeProgress": "Session en cours — Salle blanche — Secteur 00. 0 anomalie(s) identifiée(s), 0 fragment(s) de mémoire."
+      },
+      "newPageErrors": []
+    }
+  },
+  "persistence": {
+    "storageBeforeReload": {
+      "keys": [
+        "the-lying-game.save.v1",
+        "the-lying-game.archive.v1"
+      ],
+      "save": {
+        "length": 301,
+        "version": 1,
+        "currentLevelIndex": 0,
+        "completedLevels": 0
+      },
+      "archive": {
+        "length": 102,
+        "runs": 2,
+        "totalDiscoveries": 0
+      },
+      "settings": null,
+      "backupKeys": []
+    },
+    "stateAfterReload": {
+      "home": true,
+      "homeStartLabel": "NOUVELLE EXPÉRIENCE",
+      "continueDisabled": false,
+      "continueHint": "Salle 01 · Réveil — TRUST",
+      "progress": "Session en cours — Salle blanche — Secteur 00. 0 anomalie(s) identifiée(s), 0 fragment(s) de mémoire."
+    },
+    "storageAfterReload": {
+      "keys": [
+        "the-lying-game.save.v1",
+        "the-lying-game.archive.v1"
+      ],
+      "save": {
+        "length": 301,
+        "version": 1,
+        "currentLevelIndex": 0,
+        "completedLevels": 0
+      },
+      "archive": {
+        "length": 102,
+        "runs": 2,
+        "totalDiscoveries": 0
+      },
+      "settings": null,
+      "backupKeys": []
+    },
+    "newPageErrorsAfterReload": [],
+    "continueResumed": {
+      "ready": true,
+      "modalsSeen": [],
+      "dialogueLines": [
+        "THE HOST : Bonjour, participant 047. Je suis THE HOST.",
+        "THE HOST : Cette expérience mesure votre capacité de raisonnement. Rien de plus.",
+        "THE HOST : Quittez cette salle. Utilisez ZQSD, WASD ou les flèches. Approchez-vous des objets et appuyez sur E pour interagir, sur C pour inspecter."
+      ],
+      "newPageErrors": []
+    }
+  },
+  "metrics": {
+    "gotoWallClockMs": 373,
+    "title": {
+      "resources": {
+        "timing": {
+          "domContentLoadedEventEndMs": 357,
+          "loadEventEndMs": 367,
+          "responseEndMs": 28
+        },
+        "byKind": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 18942,
+            "encodedBytes": 18642,
+            "decodedBytes": 18642
+          },
+          "JS": {
+            "count": 1,
+            "transferBytes": 1436938,
+            "encodedBytes": 1436638,
+            "decodedBytes": 1436638
+          },
+          "CSS": {
+            "count": 1,
+            "transferBytes": 76779,
+            "encodedBytes": 76479,
+            "decodedBytes": 76479
+          },
+          "Polices": {
+            "count": 2,
+            "transferBytes": 63292,
+            "encodedBytes": 62692,
+            "decodedBytes": 62692
+          }
+        },
+        "total": {
+          "count": 5,
+          "transferBytes": 1595951,
+          "encodedBytes": 1594451,
+          "decodedBytes": 1594451
+        },
+        "rows": [
+          {
+            "url": "http://127.0.0.1:8103/",
+            "kind": "Document",
+            "initiatorType": "navigation",
+            "transferSize": 18942,
+            "encodedBodySize": 18642,
+            "decodedBodySize": 18642,
+            "durationMs": 367
+          },
+          {
+            "url": "http://127.0.0.1:8103/assets/index-LqqsWSX1.js",
+            "kind": "JS",
+            "initiatorType": "script",
+            "transferSize": 1436938,
+            "encodedBodySize": 1436638,
+            "decodedBodySize": 1436638,
+            "durationMs": 17
+          },
+          {
+            "url": "http://127.0.0.1:8103/assets/index-Cxis6QE9.css",
+            "kind": "CSS",
+            "initiatorType": "link",
+            "transferSize": 76779,
+            "encodedBodySize": 76479,
+            "decodedBodySize": 76479,
+            "durationMs": 10
+          },
+          {
+            "url": "http://127.0.0.1:8103/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+            "kind": "Polices",
+            "initiatorType": "css",
+            "transferSize": 40704,
+            "encodedBodySize": 40404,
+            "decodedBodySize": 40404,
+            "durationMs": 101
+          },
+          {
+            "url": "http://127.0.0.1:8103/assets/space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+            "kind": "Polices",
+            "initiatorType": "css",
+            "transferSize": 22588,
+            "encodedBodySize": 22288,
+            "decodedBodySize": 22288,
+            "durationMs": 101
+          }
+        ]
+      },
+      "memory": {
+        "usedJSHeapSize": 10000000,
+        "totalJSHeapSize": 10000000,
+        "jsHeapSizeLimit": 3760000000
+      }
+    },
+    "memoryGame0s": {
+      "usedJSHeapSize": 10000000,
+      "totalJSHeapSize": 10000000,
+      "jsHeapSizeLimit": 3760000000
+    },
+    "fps10s": {
+      "frames": 176,
+      "spanMs": 10050,
+      "fpsMoyen": 17.41,
+      "fpsMinParSecondeComplete": 17,
+      "framesParSecondeComplete": [
+        18,
+        18,
+        17,
+        17,
+        18,
+        17,
+        17,
+        18,
+        17,
+        18
+      ],
+      "intervalleMaxMs": 66.8,
+      "fpsMinInstantane": 14.97
+    },
+    "memoryGame30s": {
+      "usedJSHeapSize": 10000000,
+      "totalJSHeapSize": 10000000,
+      "jsHeapSizeLimit": 3760000000
+    },
+    "resourcesSession": {
+      "timing": {
+        "domContentLoadedEventEndMs": 370,
+        "loadEventEndMs": 373,
+        "responseEndMs": 53
+      },
+      "byKind": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 18942,
+          "encodedBytes": 18642,
+          "decodedBytes": 18642
+        },
+        "JS": {
+          "count": 1,
+          "transferBytes": 1436938,
+          "encodedBytes": 1436638,
+          "decodedBytes": 1436638
+        },
+        "CSS": {
+          "count": 1,
+          "transferBytes": 76779,
+          "encodedBytes": 76479,
+          "decodedBytes": 76479
+        },
+        "Polices": {
+          "count": 2,
+          "transferBytes": 63292,
+          "encodedBytes": 62692,
+          "decodedBytes": 62692
+        }
+      },
+      "total": {
+        "count": 5,
+        "transferBytes": 1595951,
+        "encodedBytes": 1594451,
+        "decodedBytes": 1594451
+      },
+      "rows": [
+        {
+          "url": "http://127.0.0.1:8103/",
+          "kind": "Document",
+          "initiatorType": "navigation",
+          "transferSize": 18942,
+          "encodedBodySize": 18642,
+          "decodedBodySize": 18642,
+          "durationMs": 373
+        },
+        {
+          "url": "http://127.0.0.1:8103/assets/index-LqqsWSX1.js",
+          "kind": "JS",
+          "initiatorType": "script",
+          "transferSize": 1436938,
+          "encodedBodySize": 1436638,
+          "decodedBodySize": 1436638,
+          "durationMs": 7
+        },
+        {
+          "url": "http://127.0.0.1:8103/assets/index-Cxis6QE9.css",
+          "kind": "CSS",
+          "initiatorType": "link",
+          "transferSize": 76779,
+          "encodedBodySize": 76479,
+          "decodedBodySize": 76479,
+          "durationMs": 4
+        },
+        {
+          "url": "http://127.0.0.1:8103/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2",
+          "kind": "Polices",
+          "initiatorType": "css",
+          "transferSize": 40704,
+          "encodedBodySize": 40404,
+          "decodedBodySize": 40404,
+          "durationMs": 7
+        },
+        {
+          "url": "http://127.0.0.1:8103/assets/space-grotesk-latin-wght-normal-BhU9QXUp.woff2",
+          "kind": "Polices",
+          "initiatorType": "css",
+          "transferSize": 22588,
+          "encodedBodySize": 22288,
+          "decodedBodySize": 22288,
+          "durationMs": 7
+        }
+      ]
+    },
+    "memoryEnd": {
+      "usedJSHeapSize": 10000000,
+      "totalJSHeapSize": 10000000,
+      "jsHeapSizeLimit": 3760000000
+    }
+  },
+  "requestCount": 10,
+  "console": [
+    {
+      "t": 8643,
+      "type": "warning",
+      "text": "[.WebGL-0x3c0c00627a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:8103/",
+      "line": 0
+    },
+    {
+      "t": 8643,
+      "type": "warning",
+      "text": "[.WebGL-0x3c0c00627a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:8103/",
+      "line": 0
+    },
+    {
+      "t": 8720,
+      "type": "warning",
+      "text": "[.WebGL-0x3c0c00627a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:8103/",
+      "line": 0
+    },
+    {
+      "t": 8810,
+      "type": "warning",
+      "text": "[.WebGL-0x3c0c00627a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+      "url": "http://127.0.0.1:8103/",
+      "line": 0
+    }
+  ],
+  "pageerrors": [],
+  "requestfailed": [],
+  "httpErrors": [],
+  "dialogs": [],
+  "crashes": [],
+  "screenshots": [
+    {
+      "t": 6142,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\01-titre.png",
+      "bytes": 518037,
+      "sha256": "31d3b8bc6cbd051d3aeb4f38d24278fbd2fff108006cc7853bf6e4daeb78c42b"
+    },
+    {
+      "t": 9349,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\02-debut.png",
+      "bytes": 95665,
+      "sha256": "45462c47fe54001ed5584fe938f046f8517821ea537d05ce50ef61bf68acae55"
+    },
+    {
+      "t": 13961,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\03-jeu-0s.png",
+      "bytes": 948991,
+      "sha256": "2467e07994318c6b6990af4c938d53a5a669994d62c2df2d8566b620d056d65f"
+    },
+    {
+      "t": 29967,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\04-jeu-15s.png",
+      "bytes": 949219,
+      "sha256": "eff007cb894e24b6d4f12282a6453d5f61553132d5857f4ba3b141c717bc2282"
+    },
+    {
+      "t": 45105,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\05-jeu-30s.png",
+      "bytes": 948658,
+      "sha256": "d1b26c5f0a95b265669d1fce290d46ef2305d11f97d7bb57d06ff6463bab8353"
+    },
+    {
+      "t": 45719,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\03b-pause-ouverte.png",
+      "bytes": 155032,
+      "sha256": "73a0e542ca5784f0fd346bab037e07e7425ad88761cc15be3007cb62582c9ae7"
+    },
+    {
+      "t": 54355,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\07-nouvelle-partie-apres-menu.png",
+      "bytes": 948802,
+      "sha256": "65467f36bf76683e5ba2d3411c8e6d84e25f9d0cf7879ace1b71e2dfeca03c94"
+    },
+    {
+      "t": 65889,
+      "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\06-titre-apres-rechargement.png",
+      "bytes": 521040,
+      "sha256": "88a05dea65f449508470a6e97eaf6e178dd05aca2f4ed83512a04ae9b9ff806e"
+    }
+  ],
+  "steps": [
+    {
+      "id": "E1-titre",
+      "t": 6142,
+      "resume": "écran titre=true, bouton « COMMENCER L’EXPÉRIENCE », continuer désactivé=true"
+    },
+    {
+      "id": "E2-debut",
+      "t": 12759,
+      "resume": "prologue=6 clics, partie prête=true, 3 ligne(s) de dialogue"
+    },
+    {
+      "id": "E3-jeu",
+      "t": 45229,
+      "resume": "30 s : 25 déplacements, 0 Entrée, superpositions=[]"
+    },
+    {
+      "id": "E4-pause",
+      "t": 45722,
+      "resume": "ouverte=true, fermée=true"
+    },
+    {
+      "id": "E5-redemarrage",
+      "t": 54355,
+      "resume": "titre atteint=true, nouvelle partie prête=true, erreurs=0"
+    },
+    {
+      "id": "E5b-recommencer-salle",
+      "t": 58791,
+      "resume": "prête=true, erreurs=0"
+    },
+    {
+      "id": "E6-persistance",
+      "t": 68791,
+      "resume": "« Continuer » actif=true, clé de sauvegarde=true"
+    }
+  ]
+}

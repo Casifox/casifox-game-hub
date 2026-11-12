@@ -1,0 +1,18 @@
+{
+  "id": "T-LYING-02",
+  "bug": "BUG-the-lying-game-002",
+  "url": "https://casifox.github.io/the-lying-game/",
+  "confirmClicked": true,
+  "status": "TEST RÉUSSI",
+  "detail": "une sauvegarde subsiste après l'échec d'écriture",
+  "evidence": {
+    "keyBefore": true,
+    "keyAfter": "{\"version\":1,\"createdAt\":1794475044938,\"updatedAt\":1794475058039,\"currentLevelIndex\":0,\"completedLevels\":[],\"memory\":{\"discoveredLies\":[],\"secrets\":[],\"clues\":[],\"hintsUsed\":0,\"followedHost\":0,\"resistedHost\":0,\"glitchEncounters\":0,\"choices\":[]},\"seenChapters\":[\"trust\"],\"playTimeMs\":2199.10000000149}",
+    "injectedErrors": 1,
+    "pageErrors": [
+      {
+        "message": "TEST-T-LYING-02 : écriture refusée (simulation de quota)"
+      }
+    ]
+  }
+}

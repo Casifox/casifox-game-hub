@@ -1,0 +1,232 @@
+{
+  "test": "Tests ciblés T-LYING-01 et T-LYING-02",
+  "env": {
+    "node": "v24.22.1",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18",
+    "os": "Windows_NT 10.0.26300 x64",
+    "headless": true,
+    "locale": "fr-FR",
+    "timezone": "Europe/Paris",
+    "deviceScaleFactor": 1,
+    "baseUrl": "http://127.0.0.1:8103/"
+  },
+  "url": "http://127.0.0.1:8103/",
+  "generatedAt": "2026-11-12T08:38:48.984Z",
+  "results": {
+    "T-LYING-01": {
+      "id": "T-LYING-01",
+      "title": "Cadrage portrait : minuteur périodique en paysage de bureau",
+      "expected": "En paysage de bureau, le minuteur de cadrage portrait ne doit pas interroger matchMedia ni rechercher le canvas toutes les 40 ms. Après correction : 0 appel périodique observé sur 10 s, au titre comme en jeu.",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "titleMeasurement": {
+        "now": 13244.60000000149,
+        "matchMediaCalls": 0,
+        "matchMediaByQuery": {},
+        "portraitQuery": "(max-width: 600px) and (orientation: portrait)",
+        "portraitQueryCalls": 0,
+        "canvasQueryCalls": 251
+      },
+      "gameplayMeasurement": {
+        "now": 30584.900000002235,
+        "matchMediaCalls": 95,
+        "matchMediaByQuery": {
+          "(max-width: 600px) and (orientation: portrait)": 95
+        },
+        "portraitQuery": "(max-width: 600px) and (orientation: portrait)",
+        "portraitQueryCalls": 95,
+        "canvasQueryCalls": 95
+      },
+      "status": "TEST ÉCHOUÉ (minuteur actif reproduit)",
+      "gameStart": {
+        "confirmationNeeded": false,
+        "prologueClicks": 6,
+        "ready": true,
+        "dialogueLines": [
+          "THE HOST : Bonjour, participant 047. Je suis THE HOST.",
+          "THE HOST : Cette expérience mesure votre capacité de raisonnement. Rien de plus.",
+          "THE HOST : Quittez cette salle. Utilisez ZQSD, WASD ou les flèches. Approchez-vous des objets et appuyez sur E pour interagir, sur C pour inspecter."
+        ]
+      },
+      "observations": {
+        "titleTickerPeriodicCalls": 251,
+        "gameplayTickerPeriodicCalls": 190
+      },
+      "expectedTickerPeriodicCalls": 0,
+      "console": [
+        {
+          "t": 15485,
+          "type": "warning",
+          "text": "[.WebGL-0x601c00626800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 15580,
+          "type": "warning",
+          "text": "[.WebGL-0x601c00626800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 15638,
+          "type": "warning",
+          "text": "[.WebGL-0x601c00626800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        },
+        {
+          "t": 15722,
+          "type": "warning",
+          "text": "[.WebGL-0x601c00626800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+          "url": "http://127.0.0.1:8103/",
+          "line": 0
+        }
+      ],
+      "pageerrors": [],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 13498,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\t-lying-01-titre-paysage.png",
+          "bytes": 518311,
+          "sha256": "3fc253e5d38e0db6173157feee8d318aa136c40f31516ebcc5118a59c99cb20f"
+        },
+        {
+          "t": 31434,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\t-lying-01-jeu-paysage.png",
+          "bytes": 949011,
+          "sha256": "f43f5ed390494c719342091e2b2ae58c932ca602454915eb260064ddc8fcf2e3"
+        }
+      ]
+    },
+    "T-LYING-02": {
+      "id": "T-LYING-02",
+      "title": "Échec d’écriture pendant beginNewGame",
+      "expected": "En cas d’échec de l’écriture de la nouvelle sauvegarde, l’ancienne sauvegarde doit rester intacte.",
+      "seededSaveMarker": {
+        "currentLevelIndex": 1,
+        "completedLevels": [
+          "level_01"
+        ],
+        "clues": [
+          "clue_white_room_button"
+        ]
+      },
+      "status": "TEST ÉCHOUÉ (perte de l’ancienne sauvegarde)",
+      "initialStartState": {
+        "modal": true,
+        "prologue": false,
+        "modalButtons": [
+          "REVENIR",
+          "NOUVELLE SESSION"
+        ]
+      },
+      "before": {
+        "save": {
+          "exists": true,
+          "length": 323,
+          "parsed": {
+            "version": 1,
+            "createdAt": 1794472664091,
+            "updatedAt": 1794472694091,
+            "currentLevelIndex": 1,
+            "completedLevels": [
+              "level_01"
+            ],
+            "memory": {
+              "discoveredLies": [],
+              "secrets": [],
+              "clues": [
+                "clue_white_room_button"
+              ],
+              "hintsUsed": 1,
+              "followedHost": 0,
+              "resistedHost": 1,
+              "glitchEncounters": 0,
+              "choices": []
+            },
+            "seenChapters": [
+              "trust"
+            ],
+            "playTimeMs": 42000
+          },
+          "keys": [
+            "the-lying-game.save.v1",
+            "the-lying-game.archive.v1"
+          ],
+          "homeContinueDisabled": false,
+          "homeContinueHint": "Salle 02 · Trois vies — TRUST"
+        },
+        "storageKeys": [
+          "the-lying-game.save.v1",
+          "the-lying-game.archive.v1"
+        ]
+      },
+      "after": {
+        "exists": false,
+        "length": 0,
+        "parsed": null,
+        "keys": [
+          "the-lying-game.archive.v1"
+        ],
+        "archive": {
+          "runs": 2,
+          "totalDiscoveries": 1
+        },
+        "writeFailure": {
+          "attempted": [
+            {
+              "key": "the-lying-game.save.v1",
+              "length": 285,
+              "t": 3352.099999997765
+            }
+          ],
+          "thrown": 1
+        },
+        "unhandled": [
+          {
+            "reason": "Simulated storage quota error",
+            "at": 3405.599999997765
+          }
+        ],
+        "state": {
+          "dataView": "home",
+          "screenRoot": true,
+          "home": true,
+          "prologue": false,
+          "gameShell": false,
+          "dialogue": false,
+          "modal": false,
+          "homeStartLabel": "NOUVELLE EXPÉRIENCE",
+          "homeContinueDisabled": false
+        }
+      },
+      "expectedOldSaveExists": true,
+      "observedOldSaveExists": false,
+      "conclusion": "La sauvegarde précédente a disparu après l’échec d’écriture de la nouvelle sauvegarde.",
+      "console": [],
+      "pageerrors": [
+        {
+          "name": "QuotaExceededError",
+          "message": "Simulated storage quota error",
+          "stack": ""
+        }
+      ],
+      "requestfailed": [],
+      "httpErrors": [],
+      "screenshots": [
+        {
+          "t": 4850,
+          "file": "C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\t-lying-02-echec-ecriture.png",
+          "bytes": 521096,
+          "sha256": "f41499e83613147f82dfa389d2096f9a24c72073b2151f9561111c96040c65a4"
+        }
+      ]
+    }
+  }
+}

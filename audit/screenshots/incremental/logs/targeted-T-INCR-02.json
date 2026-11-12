@@ -1,0 +1,19 @@
+{
+  "id": "T-INCR-02",
+  "bug": "BUG-incremental-002",
+  "url": "https://casifox.github.io/neon-jackpot/",
+  "route": "hub",
+  "renderedJournalIcons": 6,
+  "status": "TEST RÉUSSI",
+  "detail": "entrée importée chargée, contenu affiché sans élément injecté",
+  "evidence": {
+    "scriptExecuted": false,
+    "injectedImgCount": 0,
+    "stateJournalLength": 1,
+    "stateJournalFirstIcon": "<img src=x onerr",
+    "stateTokens": 1000,
+    "textHasMarker": true,
+    "firstJournalIconHtml": "<span class=\"journal-icon\">&lt;img src=x onerr</span>",
+    "pageErrors": []
+  }
+}
