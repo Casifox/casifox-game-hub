@@ -9,6 +9,7 @@ Date : 2026-11-12, 10:04 (+01:00). Compte GitHub : `Casifox` (authentifié, droi
 | AVANT LE SILENCE | https://github.com/Casifox/avant-le-silence | **https://casifox.github.io/avant-le-silence/** | `built`, branche `main`, racine | legacy | `1ac53ba2315c695c9484e21ff0ff2d9eabaf22b4` | **EN LIGNE** |
 | Quand les notes s'effacent | https://github.com/Casifox/quand-les-notes-seffacent | **https://casifox.github.io/quand-les-notes-seffacent/** | `built`, branche `main`, racine | legacy | `5d7947befb702659b90d490e89bdad92bb78aa96` | **EN LIGNE** |
 | The Lying Game | https://github.com/Casifox/the-lying-game | **https://casifox.github.io/the-lying-game/** | workflow `pages.yml`, artefact `docs` | GitHub Actions | `78c1964457e5c4fc476e60cd8ef64ced9d0f92fa` | **EN LIGNE** |
+| CASIFOX GAME HUB | https://github.com/Casifox/casifox-game-hub | **https://casifox.github.io/casifox-game-hub/** | `built`, branche `main`, racine | legacy | `2f9cac500f3458a249a0f644727932edb2f76e0e` | **EN LIGNE** |
 
 - The Lying Game : workflow « Verify and deploy GitHub Pages » exécuté le 2026-11-12 à 09:00:01 UTC (run `43187567531`), **succès**, durée 39 s. Chaque push sur `main` reconstruit et redéploie.
 - AVANT LE SILENCE et Quand les notes s'effacent : publication depuis la branche `main`, dossier racine (`/`), fichier `.nojekyll` présent.
@@ -61,10 +62,9 @@ Les bugs de l'audit restent ouverts (voir `BUGS.md`) :
 - **Quand les notes s'effacent** : aucun bug confirmé dans les parties lues.
 - Aucun test de sécurité n'a été fait sur ces trois sites au-delà des parcours fonctionnels.
 
-## 6. Ce qui reste (phases 7, 9, 10)
+## 6. Ce qui reste (améliorations, pas blocages)
 
-- Corriger les bugs ouverts (phase 5), puis re-tester et redéployer.
-- Créer le hub CASIFOX GAME HUB (phase 7) avec les cinq jeux et leurs URLs réelles.
-- Tester le hub en local puis en public (phase 9).
-- Rédiger le rapport final et la notation (phases 6 et 10).
-- L'ordinateur n'est pas éteint : la mission n'est pas terminée.
+- Les 7 bugs confirmés ont été corrigés, testés en local puis sur les URLs publiques (voir `CHANGELOG.md`).
+- Le hub est publié et testé : 21/21 tests publics réussis, 404 personnalisée vérifiée.
+- La notation avant/après est dans `SCORES.md`, le rapport final dans `FINAL-REPORT.md`.
+- Restent des améliorations non bloquantes : suite de tests pour Neon Jackpot, mise à jour des devDependencies de Doomscroll, tests du piano de Quand les notes, fins de The Lying Game, politique commune de sauvegarde, mesures sur appareil réel.

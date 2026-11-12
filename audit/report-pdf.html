@@ -60,7 +60,7 @@
 </div>
 
 <h2>1. En bref</h2>
-<p>Les cinq jeux ont été lus, construits et testés réellement. <b>Les cinq sont désormais publiés sur GitHub Pages et testés sur leur URL publique</b> (les trois derniers le 12 novembre). Sept anomalies ont été reproduites à l'exécution. <b>Aucune correction n'a encore été appliquée</b> : ce document liste celles à faire, par ordre de priorité, avec leur preuve.</p>
+<p>Les cinq jeux ont été lus, construits et testés réellement. <b>Les cinq sont désormais publiés sur GitHub Pages et testés sur leur URL publique</b> (les trois derniers le 12 novembre). Sept anomalies ont été reproduites à l'exécution, <b>puis corrigées et re-testées sur les URLs publiques</b>. Ce document récapitule les corrections, les notes et les liens.</p>
 <ul>
   <li><b>1 bug critique</b> : Neon Jackpot — une sauvegarde forgée, importée par le joueur, exécute du code dans le navigateur.</li>
   <li><b>2 bugs majeurs</b> : Neon Jackpot et AVANT LE SILENCE — une sauvegarde illisible est remplacée sans copie de secours.</li>
@@ -69,7 +69,7 @@
 </ul>
 
 <div class="callout">
-  <strong>Priorité n°1 :</strong> corriger Neon Jackpot (critique + majeur) et AVANT LE SILENCE (majeur). Ce sont les seuls bugs qui font perdre des données ou exposent le navigateur. Les autres peuvent attendre une passe ultérieure.
+  <strong>Corrections effectuées :</strong> les sept bugs sont corrigés (Neon Jackpot, AVANT LE SILENCE, The Lying Game, Doomscroll Dungeon), poussés après tests et vérifiés en ligne. Détail : <b>audit/CHANGELOG.md</b>. Les améliorations restantes sont non bloquantes.
 </div>
 
 <h2>2. Bugs confirmés à l'exécution</h2>
@@ -78,16 +78,16 @@
     <tr><th>ID</th><th>Jeu</th><th>Bug</th><th>Gravité</th><th>Statut</th></tr>
   </thead>
   <tbody>
-    <tr><td>BUG-incremental-002</td><td>Neon Jackpot</td><td>Sauvegarde importée : script exécuté dans la page (XSS)</td><td><span class="badge critique">CRITIQUE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-incremental-001</td><td>Neon Jackpot</td><td>Sauvegarde corrompue réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-avant-le-silence-001</td><td>AVANT LE SILENCE</td><td>Sauvegarde illisible réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-the-lying-game-001</td><td>The Lying Game</td><td>Minuteur de cadrage portrait actif en permanence (144 appels en 10 s)</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-the-lying-game-002</td><td>The Lying Game</td><td>Nouvelle partie : ancienne sauvegarde effacée avant l'écriture de la nouvelle</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ko">CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-doomscroll-dungeon-001</td><td>Doomscroll Dungeon</td><td>Graine de sauvegarde affichée en HTML brut</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge partiel">HTML CONFIRMÉ</span></td></tr>
-    <tr><td>BUG-incremental-003</td><td>Neon Jackpot</td><td>Fusion de sauvegarde : pollution de prototype locale</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge partiel">PARTIEL</span></td></tr>
+    <tr><td>BUG-incremental-002</td><td>Neon Jackpot</td><td>Sauvegarde importée : script exécuté dans la page (XSS)</td><td><span class="badge critique">CRITIQUE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-incremental-001</td><td>Neon Jackpot</td><td>Sauvegarde corrompue réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-avant-le-silence-001</td><td>AVANT LE SILENCE</td><td>Sauvegarde illisible réécrite sans copie de secours</td><td><span class="badge majeure">MAJEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-the-lying-game-001</td><td>The Lying Game</td><td>Minuteur de cadrage portrait actif en permanence (144 appels en 10 s)</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-the-lying-game-002</td><td>The Lying Game</td><td>Nouvelle partie : ancienne sauvegarde effacée avant l'écriture de la nouvelle</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-doomscroll-dungeon-001</td><td>Doomscroll Dungeon</td><td>Graine de sauvegarde affichée en HTML brut</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
+    <tr><td>BUG-incremental-003</td><td>Neon Jackpot</td><td>Fusion de sauvegarde : pollution de prototype locale</td><td><span class="badge mineure">MINEURE</span></td><td><span class="badge ok">CORRIGÉ</span></td></tr>
   </tbody>
 </table>
-<p class="small">« CONFIRMÉ » = reproduit à l'exécution, preuve dans <b>audit/screenshots/&lt;jeu&gt;/logs/targeted-*.json</b>. Pour Doomscroll, l'injection HTML est confirmée ; le script n'a pas été exécuté dans les conditions testées.</p>
+<p class="small">« CORRIGÉ » = bug reproduit à l'exécution, corrigé puis re-testé en local et sur l'URL publique. Preuves : <b>audit/BUGS.md</b>, <b>audit/CHANGELOG.md</b> et <b>audit/screenshots/&lt;jeu&gt;/logs/targeted-*.json</b>.</p>
 
 <h3>Détail des deux corrections prioritaires</h3>
 
@@ -195,7 +195,7 @@
     <tr><td>The Lying Game</td><td>PUBLIÉ</td><td><span class="badge ok">RÉUSSI</span></td><td>10</td><td>3,13 Mo</td><td>3,20 s</td><td>14 / 12</td></tr>
   </tbody>
 </table>
-<p class="small">Aucune erreur JavaScript, aucune réponse HTTP en échec et aucun débordement horizontal (1920, 1366, 768, 390 px) sur les 5 parcours. Les deux jeux publiés servent exactement la version du code local (comparaison par empreinte SHA256).</p>
+<p class="small">Aucune erreur JavaScript, aucune réponse HTTP en échec et aucun débordement horizontal (1920, 1366, 768, 390 px) sur les 5 parcours. Les cinq jeux publiés et le hub servent exactement la version du code local (comparaison par empreinte SHA256).</p>
 
 <h2>5. Publication</h2>
 <table>
@@ -206,10 +206,11 @@
     <tr><td>AVANT LE SILENCE</td><td>https://casifox.github.io/avant-le-silence/</td><td><span class="badge ok">EN LIGNE</span> — SHA256 servi = HEAD</td></tr>
     <tr><td>Quand les notes s'effacent</td><td>https://casifox.github.io/quand-les-notes-seffacent/</td><td><span class="badge ok">EN LIGNE</span> — SHA256 servi = HEAD</td></tr>
     <tr><td>The Lying Game</td><td>https://casifox.github.io/the-lying-game/</td><td><span class="badge ok">EN LIGNE</span> — workflow Pages, SHA256 servi = HEAD</td></tr>
+    <tr><td>CASIFOX GAME HUB</td><td>https://casifox.github.io/casifox-game-hub/</td><td><span class="badge ok">EN LIGNE</span> — 21/21 tests publics, 404 vérifiée</td></tr>
   </tbody>
 </table>
-<p>Les trois publications ont été testées sur leur URL publique le 12 novembre : chargement, démarrage, partie de 30 s, sauvegarde et affichage sur 4 tailles d'écran. Toutes réussies, 0 erreur JavaScript, 0 requête en échec. Détail : <b>audit/PUBLICATION.md</b> et <b>audit/TEST-REPORT-*.md</b>.</p>
-<p>Le hub « CASIFOX GAME HUB » n'est pas encore créé : il doit être construit après la notation, à partir des données réelles.</p>
+<p>Les trois publications et le hub ont été testés sur leur URL publique le 12 novembre : chargement, démarrage, partie de 30 s, sauvegarde et affichage sur 4 tailles d'écran. Toutes réussies, 0 erreur JavaScript, 0 requête en échec. Détail : <b>audit/PUBLICATION.md</b>, <b>audit/TEST-REPORT-*.md</b> et <b>audit/HUB-TEST-REPORT.md</b>.</p>
+<p>Le hub « CASIFOX GAME HUB » est publié et testé : 21/21 tests publics réussis, page 404 personnalisée vérifiée. Il est construit uniquement à partir des données réelles de l'audit.</p>
 
 <h2>6. Ordre d'exécution conseillé</h2>
 <ol>
@@ -219,7 +220,7 @@
   <li><span class="num">4</span> <b>Doomscroll Dungeon</b> : assainir la graine (T-DOOM-01), mettre à jour les outils de développement, relancer les 35 tests.</li>
   <li><span class="num">5</span> <b>Quand les notes s'effacent</b> : Git, README, version ; tests des données de récit.</li>
   <li><span class="num">6</span> <b>Politique commune de sauvegarde</b>, puis re-test de chacun.</li>
-  <li><span class="num">7</span> <b>Notation avant/après</b>, puis <b>hub</b>, <b>publication du hub</b> et tests finaux. Les cinq jeux sont déjà en ligne.</li>
+  <li><span class="num">7</span> <b>Notation avant/après</b>, puis <b>hub</b>, <b>publication du hub</b> et tests finaux. Les cinq jeux et le hub sont déjà en ligne.</li>
 </ol>
 
 <div class="note">
@@ -236,7 +237,7 @@
 </ul>
 
 <div class="footer-note">
-  CASIFOX GAME HUB — bilan d'audit du 12 novembre 2026. Sources : <b>audit/FINAL-REPORT.md</b> (à venir), <b>audit/BUGS.md</b>, <b>audit/IMPROVEMENTS.md</b>, <b>audit/TEST-REPORT-*.md</b>, <b>audit/SCORES.md</b> (à venir). Aucune statistique, aucun avis et aucune popularité ne sont simulés dans ce document.
+  CASIFOX GAME HUB — bilan final du 12 novembre 2026. Sources : <b>audit/FINAL-REPORT.md</b>, <b>audit/BUGS.md</b>, <b>audit/CHANGELOG.md</b>, <b>audit/IMPROVEMENTS.md</b>, <b>audit/TEST-REPORT-*.md</b>, <b>audit/SCORES.md</b>. Aucune statistique, aucun avis et aucune popularité ne sont simulés dans ce document.
 </div>
 
 </body>

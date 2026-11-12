@@ -44,4 +44,11 @@ Preuves : `audit/screenshots/hub/` (captures et `logs/hub-result.json`).
 
 ## Après publication
 
-Section complétée après le déploiement sur GitHub Pages (URL, SHA du commit, résultats du même test sur l'URL publique).
+- URL : **https://casifox.github.io/casifox-game-hub/**
+- Dépôt : https://github.com/Casifox/casifox-game-hub
+- Commit publié : `2f9cac500f3458a249a0f644727932edb2f76e0e`
+- Pages : `built`, branche `main`, racine, `.nojekyll`.
+- Le même test a été relancé sur l'URL publique avec `CASIFOX_HUB_URL` : **21/21 TEST RÉUSSI**, 0 erreur JavaScript, 0 réponse HTTP ≥ 400, 0 requête en échec, 0 débordement horizontal sur les quatre tailles d'écran.
+- Une URL inexistante (`/page-inexistante-xyz`) renvoie **HTTP 404** avec la page personnalisée (`custom_404: true`).
+- Captures publiques : `audit/screenshots/hub/` ; captures locales conservées dans `audit/screenshots/hub-local/`.
+- Limite : le test public utilise le même Chromium headless ; aucun test sur appareil réel ni lecteur d'écran complet.

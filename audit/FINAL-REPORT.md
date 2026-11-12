@@ -4,7 +4,7 @@ Date : 2026-11-12. Mission : audit, tests réels, corrections, notation et porta
 
 ## 1. Résumé exécutif
 
-Les cinq jeux ont été inventoriés, audités, construits et testés. **Les cinq sont publiés sur GitHub Pages et testés sur leur URL publique.** Sept anomalies ont été confirmées à l'exécution ; **les sept ont été corrigées**, poussées après tests et re-vérifiées en ligne. Le portail CASIFOX GAME HUB a été créé à partir des données réelles, testé en local puis publié.
+Les cinq jeux ont été inventoriés, audités, construits et testés. **Les cinq sont publiés sur GitHub Pages et testés sur leur URL publique.** Sept anomalies ont été confirmées à l'exécution ; **les sept ont été corrigées**, poussées après tests et re-vérifiées en ligne. Le portail CASIFOX GAME HUB a été créé à partir des données réelles, **testé en local et sur son URL publique, puis publié**.
 
 - 5 jeux en ligne, 0 lien mort.
 - 7 bugs trouvés, 7 corrigés, 0 régression détectée sur les parcours rejoués.
@@ -20,6 +20,7 @@ Les cinq jeux ont été inventoriés, audités, construits et testés. **Les cin
 | Neon Jackpot | https://casifox.github.io/neon-jackpot/ | EN LIGNE | 3 | 3 | 74 | **80** | +6 |
 | Quand les notes s'effacent | https://casifox.github.io/quand-les-notes-seffacent/ | EN LIGNE | 0 | 0 | 73 | **75** | +2 |
 | AVANT LE SILENCE | https://casifox.github.io/avant-le-silence/ | EN LIGNE | 1 | 1 | 71 | **72** | +1 |
+| CASIFOX GAME HUB | https://casifox.github.io/casifox-game-hub/ | EN LIGNE | 0 | 0 | — | — | — |
 
 Détail des notes : `audit/SCORES.md`. Preuves des bugs : `audit/BUGS.md`. Corrections : `audit/CHANGELOG.md`.
 
@@ -76,7 +77,7 @@ Aucune erreur JavaScript, aucune réponse HTTP ≥ 400, aucune requête en éche
 - **Quand les notes** : piano non testé automatiquement ; journées 2 à 7 non parcourues en entier ; FPS à confirmer.
 - **AVANT LE SILENCE** : pas de tests JavaScript ; pas de pause ; version 0.8.0 ; chapitres 2 à 4 non parcourus en entier ; relecture historique hors périmètre.
 - **Tous** : FPS et mémoire mesurés en headless ; pas de test sur appareil réel ni de test lecteur d'écran complet.
-- **Hub** : tests locaux et publication à suivre (voir `HUB-TEST-REPORT.md`).
+- **Hub** : publié et testé (21/21 tests publics, 404 personnalisée vérifiée). Limites : headless, pas de test lecteur d'écran complet.
 
 ## 8. Publication
 
@@ -87,13 +88,13 @@ Aucune erreur JavaScript, aucune réponse HTTP ≥ 400, aucune requête en éche
 | Neon Jackpot | https://casifox.github.io/neon-jackpot/ | EN LIGNE, version servie = HEAD |
 | Quand les notes s'effacent | https://casifox.github.io/quand-les-notes-seffacent/ | EN LIGNE |
 | AVANT LE SILENCE | https://casifox.github.io/avant-le-silence/ | EN LIGNE |
-| CASIFOX GAME HUB | https://casifox.github.io/casifox-game-hub/ | publication en cours |
+| CASIFOX GAME HUB | https://casifox.github.io/casifox-game-hub/ | EN LIGNE, 21/21 tests publics, 404 vérifiée |
 
 Détail : `audit/PUBLICATION.md`.
 
 ## 9. Prochaines étapes recommandées
 
-1. **P0** : surveiller les cinq URLs après chaque mise à jour ; conserver les tests ciblés.
+1. **P0** : surveiller les cinq URLs et le hub après chaque mise à jour ; conserver les tests ciblés.
 2. **P1** : ajouter une suite de tests à Neon Jackpot (état, import, `deepMerge`) ; mettre à jour les devDependencies de Doomscroll ; tester le piano de Quand les notes et les fins de The Lying Game.
 3. **P1** : politique commune de sauvegarde (IDEA-global-001).
 4. **P2** : réduire le bundle de The Lying Game ; mesurer les performances sur appareil réel ; compléter l'audit du moteur de Quand les notes et des chapitres d'AVANT LE SILENCE.

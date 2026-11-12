@@ -190,3 +190,17 @@ Journal des décisions techniques non triviales. Une entrée = date, contexte, o
 - Constat : fichiers ajoutés ou modifiés après la phase 2 (`LICENSE`, `robots.txt`, `.gitignore`, `tests/validate.mjs`, `assets/art/social-card.png`, `index.html`, `package.json`), avec des dates du 12/11. Le projet est passé en version 1.0.0 et dispose d'un README et d'une suite de validation.
 - Choix : publier l'état actuel, relancer `npm test` (1 669 vérifications réussies) et le parcours navigateur sur cet état. Ajouter une note en tête de l'inventaire et du rapport technique, et mettre à jour le rapport de test.
 - Justification : ne pas publier ni noter un état périmé ; conserver la trace de l'écart entre l'audit et l'état publié.
+
+## D-027 — Publication du hub et tests finaux
+
+- Date : 2026-11-12.
+- Choix : dépôt `Casifox/casifox-game-hub` (public), branche `main`, Pages `legacy` à la racine, `.nojekyll`. Commit initial `2f9cac5`. Test Playwright complet en local puis sur l'URL publique (21/21), avec vérification d'une URL inexistante (HTTP 404 personnalisé).
+- Captures publiques dans `audit/screenshots/hub/` ; copies locales dans `audit/screenshots/hub-local/`.
+- Justification : le hub devait être vérifié en ligne, pas seulement en local.
+
+## D-028 — Arrêt de l'ordinateur
+
+- Date : 2026-11-12.
+- Constat : les conditions de l'utilisateur sont remplies — 5 jeux testés, 6 pages (5 jeux + hub) en ligne et vérifiées, corrections faites et testées, rapport final écrit.
+- Choix : programmer `shutdown /s /t 60` après le dernier commit et la dernière vérification. L'arrêt est annulable avec `shutdown /a` pendant 60 secondes.
+- Justification : règle de l'utilisateur et AGENTS.md.
