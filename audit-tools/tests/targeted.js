@@ -11,9 +11,9 @@ const HUB = path.resolve(__dirname, '..', '..');
 const AUDIT = path.join(HUB, 'audit');
 
 const ROOTS = {
-  incremental: 'C:\\Users\\Noah\\Documents\\incremental',
-  avant: 'C:\\Users\\Noah\\Documents\\AVANT LE SILENCE',
-  lying: 'C:\\Users\\Noah\\Documents\\the-lying-game\\docs',
+  incremental: 'C:\\Users\\Noah\\Documents\\Jeux\\incremental',
+  avant: 'C:\\Users\\Noah\\Documents\\Jeux\\AVANT LE SILENCE',
+  lying: 'C:\\Users\\Noah\\Documents\\Jeux\\the-lying-game\\docs',
 };
 
 function save(slug, id, data) {

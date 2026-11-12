@@ -11,25 +11,25 @@ const AUDIT = path.join(HUB, 'audit');
 
 const GAMES = {
   'doomscroll-dungeon': { url: 'https://casifox.github.io/doomscroll-dungeon/' },
-  incremental: { url: 'https://casifox.github.io/neon-jackpot/', gitRoot: 'C:\\Users\\Noah\\Documents\\incremental' },
+  incremental: { url: 'https://casifox.github.io/neon-jackpot/', gitRoot: 'C:\\Users\\Noah\\Documents\\Jeux\\incremental' },
   'avant-le-silence': {
-    localRoot: 'C:\\Users\\Noah\\Documents\\AVANT LE SILENCE',
+    localRoot: 'C:\\Users\\Noah\\Documents\\Jeux\\AVANT LE SILENCE',
     port: 8101,
-    gitRoot: 'C:\\Users\\Noah\\Documents\\AVANT LE SILENCE',
+    gitRoot: 'C:\\Users\\Noah\\Documents\\Jeux\\AVANT LE SILENCE',
     versionServed: 'index.html',
     versionHead: 'index.html',
   },
   'quand-les-notes-seffacent': {
-    localRoot: "C:\\Users\\Noah\\Documents\\QUAND LES NOTES S'EFFACENT",
+    localRoot: "C:\\Users\\Noah\\Documents\\Jeux\\QUAND LES NOTES S'EFFACENT",
     port: 8102,
-    gitRoot: "C:\\Users\\Noah\\Documents\\QUAND LES NOTES S'EFFACENT",
+    gitRoot: "C:\\Users\\Noah\\Documents\\Jeux\\QUAND LES NOTES S'EFFACENT",
     versionServed: 'index.html',
     versionHead: 'index.html',
   },
   'the-lying-game': {
-    localRoot: 'C:\\Users\\Noah\\Documents\\the-lying-game\\docs',
+    localRoot: 'C:\\Users\\Noah\\Documents\\Jeux\\the-lying-game\\docs',
     port: 8103,
-    gitRoot: 'C:\\Users\\Noah\\Documents\\the-lying-game',
+    gitRoot: 'C:\\Users\\Noah\\Documents\\Jeux\\the-lying-game',
     versionServed: 'index.html',
     versionHead: 'docs/index.html',
   },
@@ -189,7 +189,7 @@ async function flowDoomscroll(c, steps, data) {
   const html = await page.content();
   const match = html.match(/assets\/(index-[^"'\s<>]+\.js)/);
   const live = match ? match[1] : null;
-  const localAssetsDir = 'C:\\Users\\Noah\\Documents\\doomscroll-dungeon\\dist\\assets';
+  const localAssetsDir = 'C:\\Users\\Noah\\Documents\\Jeux\\doomscroll-dungeon\\dist\\assets';
   const localAsset = fs.existsSync(localAssetsDir)
     ? fs.readdirSync(localAssetsDir).filter((name) => /^index-.*\.js$/.test(name)).sort().pop()
     : null;

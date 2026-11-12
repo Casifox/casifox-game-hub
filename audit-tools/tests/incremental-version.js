@@ -1,13 +1,13 @@
 'use strict';
 // Concordance de version (protocole 8.8) : fichiers servis sur GitHub Pages comparés à la copie locale
-// (C:\Users\Noah\Documents\incremental) et à HEAD Git. Lecture seule : aucun fichier du projet n'est modifié.
+// (C:\Users\Noah\Documents\Jeux\incremental) et à HEAD Git. Lecture seule : aucun fichier du projet n'est modifié.
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
-const ORIG = 'C:\\Users\\Noah\\Documents\\incremental';
+const ORIG = 'C:\\Users\\Noah\\Documents\\Jeux\\incremental';
 const BASE = 'https://casifox.github.io/neon-jackpot/';
 const LOG_DIR = 'C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\incremental\\logs';
 fs.mkdirSync(LOG_DIR, { recursive: true });

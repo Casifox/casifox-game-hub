@@ -10,7 +10,7 @@ const { spawn } = require('child_process');
 const { chromium } = require('playwright');
 
 const TOOLS = path.resolve(__dirname, '..');
-const ORIG = 'C:\\Users\\Noah\\Documents\\incremental';
+const ORIG = 'C:\\Users\\Noah\\Documents\\Jeux\\incremental';
 const PORT = 8104;
 const BASE = 'http://127.0.0.1:' + PORT + '/';
 const SHOTS = 'C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\incremental';

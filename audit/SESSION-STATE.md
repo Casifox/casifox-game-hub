@@ -80,3 +80,9 @@ La mission demandée est terminée. Améliorations non bloquantes restantes (doc
 - **Allumé.** L'arrêt programmé a été annulé le 2026-11-12 sur instruction de l'utilisateur (`shutdown /a`, code 0).
 - Ne plus jamais programmer d'extinction automatique, même si la mission est terminée (D-029).
 - Toute extinction doit être demandée explicitement par l'utilisateur.
+
+## Hors mission — rangement du 2026-11-12
+
+- Les cinq jeux ont été déplacés dans `C:\Users\Noah\Documents\Jeux\` à la demande de l'utilisateur (D-030).
+- Intégrité vérifiée : nombres de fichiers et commits HEAD identiques avant/après, 0 fichier non commité.
+- Les chemins cités dans les anciens rapports d'audit et les journaux de preuve restent ceux de l'époque des tests.

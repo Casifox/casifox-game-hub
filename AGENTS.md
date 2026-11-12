@@ -44,4 +44,4 @@ Ce fichier est chargé à chaque session. Les règles ci-dessous sont absolues e
 ## Dossiers
 
 - Dossier de travail : `C:\Users\Noah\Documents\CASIFOX-GAME-HUB\`
-- Jeux (ne pas modifier sans branche dédiée) : `C:\Users\Noah\Documents\AVANT LE SILENCE\`, `doomscroll-dungeon\`, `QUAND LES NOTES S'EFFACENT\`, `the-lying-game\`, `incremental\`
+- Jeux (ne pas modifier sans branche dédiée) : `C:\Users\Noah\Documents\Jeux\` (regroupe `AVANT LE SILENCE\`, `doomscroll-dungeon\`, `QUAND LES NOTES S'EFFACENT\`, `the-lying-game\`, `incremental\`)

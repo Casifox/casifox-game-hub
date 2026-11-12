@@ -4,7 +4,7 @@ const path = require('path');
 const L = require('./lib');
 
 (async () => {
-  const root = path.resolve('C:\\Users\\Noah\\Documents\\incremental');
+  const root = path.resolve('C:\\Users\\Noah\\Documents\\Jeux\\incremental');
   const server = await L.startStatic(root, 8104);
   const browser = await L.openBrowser();
   try {

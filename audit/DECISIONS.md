@@ -213,3 +213,13 @@ Journal des décisions techniques non triviales. Une entrée = date, contexte, o
 - Choix : ne plus jamais programmer d'extinction automatique, même si la mission est terminée. Toute extinction doit être demandée explicitement par l'utilisateur.
 - Mise à jour : `AGENTS.md` (racine et hub), `SESSION-STATE.md`.
 - Justification : instruction explicite de l'utilisateur, prioritaire sur la règle précédente.
+
+## D-030 — Regroupement des cinq jeux dans `Documents\Jeux\`
+
+- Date : 2026-11-12, après la mission d'audit (demande explicite de l'utilisateur).
+- Contexte : les cinq projets de jeux étaient éparpillés à la racine de `C:\Users\Noah\Documents\`.
+- Action : création de `C:\Users\Noah\Documents\Jeux\` et déplacement de `AVANT LE SILENCE`, `doomscroll-dungeon`, `incremental`, `QUAND LES NOTES S'EFFACENT`, `the-lying-game`. Aucun fichier supprimé ni modifié dans les jeux.
+- Vérification : nombre de fichiers et HEAD Git identiques avant/après (220/1227/218/136/3403 fichiers, commits `84bdec4`, `1b2d05b`, `154a5b1`, `5d7947b`, `1ac3495`), branches `main`, 0 fichier non commité, remotes inchangés.
+- Mise à jour : chemins absolus dans `audit-tools/tests/` (6 scripts, `node --check` OK), `AGENTS.md` (racine et hub), `SESSION-STATE.md`.
+- Non modifiés : les journaux de preuve `audit/screenshots/**/logs/*.json` conservent les anciens chemins, car ils enregistrent l'état réel au moment des tests.
+- Justification : rangement demandé par l'utilisateur. Les jeux restent des dépôts indépendants, publiés à leurs URLs GitHub Pages ; aucun n'est déplacé dans le portail (règle 7).

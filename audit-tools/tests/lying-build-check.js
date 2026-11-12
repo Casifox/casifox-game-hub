@@ -6,7 +6,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
-const REPO = 'C:\\Users\\Noah\\Documents\\the-lying-game';
+const REPO = 'C:\\Users\\Noah\\Documents\\Jeux\\the-lying-game';
 const DOCS = path.join(REPO, 'docs');
 const LOG_DIR = 'C:\\Users\\Noah\\Documents\\CASIFOX-GAME-HUB\\audit\\screenshots\\the-lying-game\\logs';
 
