@@ -223,3 +223,25 @@ Journal des décisions techniques non triviales. Une entrée = date, contexte, o
 - Mise à jour : chemins absolus dans `audit-tools/tests/` (6 scripts, `node --check` OK), `AGENTS.md` (racine et hub), `SESSION-STATE.md`.
 - Non modifiés : les journaux de preuve `audit/screenshots/**/logs/*.json` conservent les anciens chemins, car ils enregistrent l'état réel au moment des tests.
 - Justification : rangement demandé par l'utilisateur. Les jeux restent des dépôts indépendants, publiés à leurs URLs GitHub Pages ; aucun n'est déplacé dans le portail (règle 7).
+
+## D-031 — Refonte visuelle de « Quand les notes s'effacent »
+
+- Date : 2026-11-12, après la mission d'audit.
+- Contexte : demande de refonte visuelle ciblée, sans changement d'histoire, de dialogues, de progression, de mécanique de piano ni de sauvegarde.
+- Choix : branche `design/refresh-v2` dans le dépôt du jeu. Réécriture des cinq feuilles CSS, ajout de quatre détails de rendu seulement dans le JS (filigrane du jour, folio de page, pagination des carnets, libellés des touches noires, cadrage mobile du clavier) et des classes de note du pied de page. Aucun texte de récit, aucune donnée, aucun état sauvegardé modifié.
+- Vérification : `npm test` → `OK — 1669 vérifications réussies.` Parcours Playwright 1366×768 et 390×844 : 0 erreur console, 0 `pageerror`, 0 requête échouée ; choix, piano et modale de souvenir testés ; aucun débordement horizontal mobile ; touches de piano 44 px ; `prefers-reduced-motion` et focus visible vérifiés. Captures dans `C:\Users\Noah\AppData\Local\Temp\opencode\design-notes\after\`.
+- Commit : `843137d` sur `design/refresh-v2`. Aucun push.
+- Limites : Chromium headless uniquement ; clavier mobile limité à environ 8,5 touches visibles (44 px) avec défilement horizontal et cadrage automatique ; pas de lecteur d'écran ni d'appareil réel.
+- Justification : rendre le papier, la reliure et l'encre présents sans modifier le récit ni le gameplay, et corriger les contrastes et les zones vides constatés sur les captures réelles.
+
+## D-032 — Refonte visuelle des cinq jeux et publication
+
+- Date : 2026-11-12, après la mission d'audit.
+- Contexte : l'utilisateur juge les interfaces « faites par IA » et demande analyse, refonte puis publication.
+- Constat : le vocabulaire de template (dégradés violet/rose, verre dépoli, rayons 18–34 px, emojis-icônes, police Google) est identifié sur captures réelles ; les jeux à identité forte (AVANT LE SILENCE, Quand les notes, The Lying Game, Doomscroll) souffrent surtout d'incohérences.
+- Choix : une direction artistique par jeu, sur branche `design/refresh-v2` dans chaque dépôt, sans toucher au gameplay ni aux contenus. Cinq directions : salle de jeu imprimée (Neon Jackpot), catalogue d'exposition (AVANT LE SILENCE), dossier d'observation (The Lying Game), fanzine contre feed glossy (Doomscroll), carnet relié (Quand les notes).
+- Vérifications : tests et builds propres à chaque dépôt (35 tests Doomscroll, 24 The Lying Game, 1669 vérifications Quand les notes, validation de contenu AVANT, contrôles Playwright Neon), 0 erreur console, aucun débordement mobile, captures avant/après.
+- Publication : fusion fast-forward sur `main` et push des cinq dépôts ; URLs vérifiées par requête HTTP avec marqueur de version. Détail : `audit/DESIGN-REFRESH.md`.
+- Vignettes du hub régénérées (1920×1080), `hero.png` repris de la nouvelle version de Doomscroll.
+- Limites : Chromium headless uniquement ; pas de tests Firefox/WebKit, appareil réel ni lecteur d'écran ; icônes secondaires de Neon Jackpot encore en emojis désaturés.
+- Justification : remplacer le vocabulaire générique sans détruire les identités existantes, et publier un ensemble cohérent et vérifié.

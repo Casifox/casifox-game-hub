@@ -86,3 +86,10 @@ La mission demandée est terminée. Améliorations non bloquantes restantes (doc
 - Les cinq jeux ont été déplacés dans `C:\Users\Noah\Documents\Jeux\` à la demande de l'utilisateur (D-030).
 - Intégrité vérifiée : nombres de fichiers et commits HEAD identiques avant/après, 0 fichier non commité.
 - Les chemins cités dans les anciens rapports d'audit et les journaux de preuve restent ceux de l'époque des tests.
+
+## Hors mission — refonte visuelle 2.0 (2026-11-12)
+
+- Les cinq jeux ont reçu une refonte visuelle sur branche `design/refresh-v2`, fusionnée sur `main` puis publiée.
+- Détail, diagnostics et vérifications : `audit/DESIGN-REFRESH.md` ; décision D-032.
+- Vignettes du hub (`assets/images/*.png`) régénérées depuis les versions refondues.
+- Aucun gameplay, texte de jeu, contenu historique ou sauvegarde modifié.
